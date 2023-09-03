@@ -142,6 +142,11 @@ let getAllBuddyFriendshipTasks = (mixedData) => {
       remnant.set(key, value);
     }
   }
-  console.log(buddyFriendshipTasks);
+  //   console.log(buddyFriendshipTasks);
   filteredData = remnant;
+  getAllMiscellaneousTasks(filteredData);
+};
+let getAllMiscellaneousTasks = (tasks) => {
+  miscellaneousTasks = tasks;
+  //   console.log(miscellaneousTasks);
 };
