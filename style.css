@@ -111,3 +111,17 @@ body {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
 }
+
+.container {
+    color: #fefafd
+}
+
+.child {
+    width: 1041px;
+    height: 81px;
+    background-color: var(--catch);
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    text-rendering: optimizeLegibility;
+}
