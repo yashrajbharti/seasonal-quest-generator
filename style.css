@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
 
 :root {
-    --catch: #721E30;
-    --throw: #9C4A21;
-    --battle: #2E5B42;
+    --catching: #721E30;
+    --throwing: #9C4A21;
+    --battling: #2E5B42;
     --buddy: #0F2C43;
     --item: #947226;
     --miscellaneous: #26183F;
@@ -123,7 +123,7 @@ body {
     width: 1041px;
     height: 81px;
     margin: 0 auto;
-    background-color: var(--catch);
+    background-color: var(--catching);
     text-align: center;
     font-weight: 700;
     font-size: 50px;

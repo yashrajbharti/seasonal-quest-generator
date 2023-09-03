@@ -155,4 +155,14 @@ let getAllMiscellaneousTasks = (tasks) => {
 };
 
 // UI IMPLEMENTATION AND FINAL RENDERING
-let parent = document.querySelector("container");
+let parent = document.querySelector(".container");
+let tabs = document.querySelectorAll(".tasks");
+let title = document.querySelector(".child");
+for (let tab of tabs) {
+  tab.addEventListener("click", function () {
+    title.textContent = tab.textContent;
+    title.style.backgroundColor = `var(--${tab.textContent
+      .split(" ")[0]
+      .toLowerCase()})`;
+  });
+}
