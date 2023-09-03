@@ -170,5 +170,5 @@ for (let tab of tabs) {
 }
 
 button.addEventListener("click", () => {
-  //   console.log(selectedTab);
+  alert(selectedTab.textContent);
 });
