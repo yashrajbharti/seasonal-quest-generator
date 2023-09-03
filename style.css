@@ -131,3 +131,13 @@ body {
     border-radius: 15px;
     line-height: 1.6;
 }
+
+.quest {
+    background-color: #1f1a1acc;
+    min-height: 200px;
+    width: 1041px;
+    margin: 0 auto;
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+}
