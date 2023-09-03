@@ -166,9 +166,9 @@ for (let tab of tabs) {
     title.textContent = tab.textContent;
     title.style.backgroundColor = tab.getAttribute("color");
     selectedTab = tab;
+    console.log(tab.textContent);
+    if (tab.textContent === "Items Tasks") alert(tab.textContent);
   });
 }
 
-button.addEventListener("click", () => {
-  alert(selectedTab.textContent);
-});
+button.addEventListener("click", () => {});
