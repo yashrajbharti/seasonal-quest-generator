@@ -1,6 +1,14 @@
 let rawText = "";
 let rawArray = [];
 let rewardsArray = [];
+
+let catchingTasks,
+  throwingTasks,
+  battlingTasks,
+  buddyFriendshipTasks,
+  itemsTasks,
+  miscellaneousTasks = [];
+
 let getSeasonalQuestData = async () => {
   // Replace ./data.json with your JSON feed
   await fetch("./data/Season-Quests.txt")
