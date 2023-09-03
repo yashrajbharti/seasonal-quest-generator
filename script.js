@@ -34,6 +34,7 @@ let buildArray = (text) => {
   }
   buildGroups(questArray);
 };
+
 let buildGroups = (questData) => {
   let groupedData = new Map();
   let flag = false;
@@ -146,6 +147,7 @@ let getAllBuddyFriendshipTasks = (mixedData) => {
   filteredData = remnant;
   getAllMiscellaneousTasks(filteredData);
 };
+
 let getAllMiscellaneousTasks = (tasks) => {
   miscellaneousTasks = tasks;
   //   console.log(miscellaneousTasks);
