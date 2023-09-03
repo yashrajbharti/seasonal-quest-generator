@@ -162,7 +162,7 @@ let selectedTab = document.querySelectorAll(".tasks")[0];
 let button = document.querySelector(".button-name");
 
 for (let tab of tabs) {
-  tab.addEventListener("click", function () {
+  tab.addEventListener("click", () => {
     title.textContent = tab.textContent;
     title.style.backgroundColor = tab.getAttribute("color");
     selectedTab = tab;
