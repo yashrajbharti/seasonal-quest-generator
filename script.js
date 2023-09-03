@@ -1,13 +1,12 @@
 let rawText = "";
-let rawArray = [];
-let rewardsArray = [];
-
-let catchingTasks,
-  throwingTasks,
-  battlingTasks,
-  buddyFriendshipTasks,
-  itemsTasks,
-  miscellaneousTasks = [];
+let rawArray = (rewardsArray = []);
+let filteredData = new Map();
+let catchingTasks = new Map();
+let throwingTasks = new Map();
+let battlingTasks = new Map();
+let buddyFriendshipTasks = new Map();
+let itemsTasks = new Map();
+let miscellaneousTasks = new Map();
 
 let getSeasonalQuestData = async () => {
   // Replace ./data.json with your JSON feed
@@ -54,12 +53,95 @@ let buildGroups = (questData) => {
 };
 
 let filterGroups = (pairedData) => {
-  let filteredData = new Map();
   for (let [key, value] of pairedData) {
     if (value.includes("Pinap") || value.includes("Balls")) continue;
     if (value.includes("Berries") && !value.includes("Golden")) continue;
-    if (value === "200 Stardust" || value === "500 Stardust") continue;
+    if (
+      value === "200 Stardust" ||
+      value === "500 Stardust" ||
+      value === "1 Rare Candy"
+    )
+      continue;
     filteredData.set(key, value);
   }
-  console.log(filteredData);
+  getAllItemTasks(filteredData);
+};
+
+let getAllItemTasks = (mixedData) => {
+  let remnant = new Map();
+  for (let [key, value] of mixedData) {
+    if (
+      value.includes("Rare") ||
+      value.includes("Mega") ||
+      value.includes("Golden") ||
+      value.includes("Stardust")
+    ) {
+      itemsTasks.set(key, value);
+    } else {
+      remnant.set(key, value);
+    }
+  }
+  //   console.log(itemsTasks)
+  filteredData = remnant;
+  getAllCatchingTasks(filteredData);
+};
+
+let getAllCatchingTasks = (mixedData) => {
+  let remnant = new Map();
+  for (let [key, value] of mixedData) {
+    if (key[0].toLowerCase().includes("catch")) {
+      catchingTasks.set(key, value);
+    } else {
+      remnant.set(key, value);
+    }
+  }
+  //   console.log(catchingTasks)
+  filteredData = remnant;
+  getAllThrowingTasks(filteredData);
+};
+
+let getAllThrowingTasks = (mixedData) => {
+  let remnant = new Map();
+  for (let [key, value] of mixedData) {
+    if (key[0].includes("Make")) {
+      throwingTasks.set(key, value);
+    } else {
+      remnant.set(key, value);
+    }
+  }
+  //   console.log(throwingTasks);
+  filteredData = remnant;
+  getAllBattlingTasks(filteredData);
+};
+
+let getAllBattlingTasks = (mixedData) => {
+  let remnant = new Map();
+  for (let [key, value] of mixedData) {
+    if (key[0].includes("Win") || key[0].includes("Defeat")) {
+      battlingTasks.set(key, value);
+    } else {
+      remnant.set(key, value);
+    }
+  }
+  //   console.log(battlingTasks);
+  filteredData = remnant;
+  getAllBuddyFriendshipTasks(filteredData);
+};
+
+let getAllBuddyFriendshipTasks = (mixedData) => {
+  let remnant = new Map();
+  for (let [key, value] of mixedData) {
+    if (
+      key[0].includes("buddy") ||
+      key[0].includes("Gifts") ||
+      key[0].includes("Trade") ||
+      key[0].includes("Evolve")
+    ) {
+      buddyFriendshipTasks.set(key, value);
+    } else {
+      remnant.set(key, value);
+    }
+  }
+  console.log(buddyFriendshipTasks);
+  filteredData = remnant;
 };
