@@ -1,3 +1,4 @@
+// ASYNCHRONOUS PROGRAMMING AND DATA STRUCTURING
 let rawText = "";
 let rawArray = (rewardsArray = []);
 let filteredData = new Map();
@@ -152,3 +153,6 @@ let getAllMiscellaneousTasks = (tasks) => {
   miscellaneousTasks = tasks;
   //   console.log(miscellaneousTasks);
 };
+
+// UI IMPLEMENTATION AND FINAL RENDERING
+let parent = document.querySelector("container");
