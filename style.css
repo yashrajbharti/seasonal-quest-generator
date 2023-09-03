@@ -113,15 +113,21 @@ body {
 }
 
 .container {
-    color: #fefafd
+    position: relative;
+    color: #fefafd;
+    align-items: center;
+    text-transform: uppercase;
 }
 
 .child {
     width: 1041px;
     height: 81px;
+    margin: 0 auto;
     background-color: var(--catch);
     text-align: center;
     font-weight: 700;
     font-size: 50px;
     text-rendering: optimizeLegibility;
+    border-radius: 15px;
+    line-height: 1.6;
 }
