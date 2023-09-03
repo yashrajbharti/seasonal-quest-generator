@@ -169,6 +169,9 @@ for (let tab of tabs) {
     if (tab.textContent === "Items Tasks") {
       console.log(itemsTasks);
     }
+    if (tab.textContent === "Catching Tasks") {
+      console.log(catchingTasks);
+    }
   });
 }
 
