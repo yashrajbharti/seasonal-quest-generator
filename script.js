@@ -158,11 +158,17 @@ let getAllMiscellaneousTasks = (tasks) => {
 let parent = document.querySelector(".container");
 let tabs = document.querySelectorAll(".tasks");
 let title = document.querySelector(".child");
+let selectedTab = document.querySelectorAll(".tasks")[0];
+let button = document.querySelector(".button-name");
+
 for (let tab of tabs) {
   tab.addEventListener("click", function () {
     title.textContent = tab.textContent;
-    title.style.backgroundColor = `var(--${tab.textContent
-      .split(" ")[0]
-      .toLowerCase()})`;
+    title.style.backgroundColor = tab.getAttribute("color");
+    selectedTab = tab;
   });
 }
+
+button.addEventListener("click", () => {
+  //   console.log(selectedTab);
+});
