@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
 
+:root {
+    --catch: #721E30;
+    --throw: #9C4A21;
+    --battle: #2E5B42;
+    --buddy: #0F2C43;
+    --item: #947226;
+    --miscellaneous: #26183F;
+}
+
 * {
     margin: 0;
     padding: 0;
