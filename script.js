@@ -1,7 +1,6 @@
 let rawText = "";
 let rawArray = [];
 let rewardsArray = [];
-let groupedData = new Map();
 let getSeasonalQuestData = async () => {
   // Replace ./data.json with your JSON feed
   await fetch("./data/Season-Quests.txt")
@@ -29,10 +28,11 @@ let buildArray = (text) => {
   buildGroups(questArray);
 };
 let buildGroups = (questData) => {
+  let groupedData = new Map();
   let flag = false;
   for (let data of questData) {
     if (flag && data !== "") {
-      groupedData.set(rewardsArray.slice(-1), data);
+      groupedData.set([data], ...rewardsArray.slice(-1));
     }
     if (!flag) {
       rewardsArray.push(data.slice(0, -1));
@@ -42,5 +42,16 @@ let buildGroups = (questData) => {
       flag = false;
     }
   }
-  console.log(groupedData);
+  filterGroups(groupedData);
+};
+
+let filterGroups = (pairedData) => {
+  let filteredData = new Map();
+  for (let [key, value] of pairedData) {
+    if (value.includes("Pinap") || value.includes("Balls")) continue;
+    if (value.includes("Berries") && !value.includes("Golden")) continue;
+    if (value === "200 Stardust" || value === "500 Stardust") continue;
+    filteredData.set(key, value);
+  }
+  console.log(filteredData);
 };
