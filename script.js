@@ -166,11 +166,33 @@ for (let tab of tabs) {
     title.textContent = tab.textContent;
     title.style.backgroundColor = tab.getAttribute("color");
     selectedTab = tab;
+
+    if (tab.textContent === "Catching Tasks") {
+      console.clear();
+      catchingTasks = new Map([...catchingTasks.entries()].sort());
+      console.log(catchingTasks);
+    }
+    if (tab.textContent === "Throwing Tasks") {
+      console.clear();
+      throwingTasks = new Map([...throwingTasks.entries()].sort());
+      console.log(throwingTasks);
+    }
+    if (tab.textContent === "Battling Tasks") {
+      console.clear();
+      battlingTasks = new Map([...battlingTasks.entries()].sort());
+      console.log(battlingTasks);
+    }
+    if (tab.textContent === "Buddy/Friendship Tasks") {
+      console.clear();
+      console.log(buddyFriendshipTasks);
+    }
     if (tab.textContent === "Items Tasks") {
+      console.clear();
       console.log(itemsTasks);
     }
-    if (tab.textContent === "Catching Tasks") {
-      console.log(catchingTasks);
+    if (tab.textContent === "Miscellaneous Tasks") {
+      console.clear();
+      console.log(miscellaneousTasks);
     }
   });
 }
