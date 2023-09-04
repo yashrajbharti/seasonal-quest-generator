@@ -193,6 +193,13 @@ for (let tab of tabs) {
       console.clear();
       itemsTasks = new Map([...itemsTasks.entries()].sort());
       console.log(itemsTasks);
+      let temp = "";
+      for (let [key, value] of itemsTasks) {
+        if (temp === "") temp = key[0];
+        if (temp === key[0]) {
+          console.log(temp);
+        }
+      }
     }
     if (tab.textContent === "Miscellaneous Tasks") {
       console.clear();
