@@ -184,14 +184,19 @@ for (let tab of tabs) {
     }
     if (tab.textContent === "Buddy/Friendship Tasks") {
       console.clear();
+      buddyFriendshipTasks = new Map(
+        [...buddyFriendshipTasks.entries()].sort()
+      );
       console.log(buddyFriendshipTasks);
     }
     if (tab.textContent === "Items Tasks") {
       console.clear();
+      itemsTasks = new Map([...itemsTasks.entries()].sort());
       console.log(itemsTasks);
     }
     if (tab.textContent === "Miscellaneous Tasks") {
       console.clear();
+      miscellaneousTasks = new Map([...miscellaneousTasks.entries()].sort());
       console.log(miscellaneousTasks);
     }
   });

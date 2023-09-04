@@ -7,6 +7,7 @@
     --buddy: #0F2C43;
     --items: #947226;
     --miscellaneous: #26183F;
+    --filler: #292d36;
 }
 
 * {
@@ -124,7 +125,7 @@ body {
     width: 1041px;
     height: 81px;
     margin: 0 auto;
-    background-color: var(--items);
+    background-color: var(--filler);
     text-align: center;
     font-weight: 700;
     font-size: 50px;
