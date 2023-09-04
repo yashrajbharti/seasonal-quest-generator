@@ -171,16 +171,46 @@ for (let tab of tabs) {
       console.clear();
       catchingTasks = new Map([...catchingTasks.entries()].sort());
       console.log(catchingTasks);
+      let temp = "";
+      for (let [key, value] of catchingTasks) {
+        if (temp === "") temp = key[0];
+        if (temp !== key[0]) {
+          temp = key[0];
+        }
+        if (temp === key[0]) {
+          console.log(temp);
+        }
+      }
     }
     if (tab.textContent === "Throwing Tasks") {
       console.clear();
       throwingTasks = new Map([...throwingTasks.entries()].sort());
       console.log(throwingTasks);
+      let temp = "";
+      for (let [key, value] of throwingTasks) {
+        if (temp === "") temp = key[0];
+        if (temp !== key[0]) {
+          temp = key[0];
+        }
+        if (temp === key[0]) {
+          console.log(temp);
+        }
+      }
     }
     if (tab.textContent === "Battling Tasks") {
       console.clear();
       battlingTasks = new Map([...battlingTasks.entries()].sort());
       console.log(battlingTasks);
+      let temp = "";
+      for (let [key, value] of battlingTasks) {
+        if (temp === "") temp = key[0];
+        if (temp !== key[0]) {
+          temp = key[0];
+        }
+        if (temp === key[0]) {
+          console.log(temp);
+        }
+      }
     }
     if (tab.textContent === "Buddy/Friendship Tasks") {
       console.clear();
@@ -188,6 +218,16 @@ for (let tab of tabs) {
         [...buddyFriendshipTasks.entries()].sort()
       );
       console.log(buddyFriendshipTasks);
+      let temp = "";
+      for (let [key, value] of buddyFriendshipTasks) {
+        if (temp === "") temp = key[0];
+        if (temp !== key[0]) {
+          temp = key[0];
+        }
+        if (temp === key[0]) {
+          console.log(temp);
+        }
+      }
     }
     if (tab.textContent === "Items Tasks") {
       console.clear();
@@ -196,6 +236,9 @@ for (let tab of tabs) {
       let temp = "";
       for (let [key, value] of itemsTasks) {
         if (temp === "") temp = key[0];
+        if (temp !== key[0]) {
+          temp = key[0];
+        }
         if (temp === key[0]) {
           console.log(temp);
         }
@@ -205,6 +248,16 @@ for (let tab of tabs) {
       console.clear();
       miscellaneousTasks = new Map([...miscellaneousTasks.entries()].sort());
       console.log(miscellaneousTasks);
+      let temp = "";
+      for (let [key, value] of miscellaneousTasks) {
+        if (temp === "") temp = key[0];
+        if (temp !== key[0]) {
+          temp = key[0];
+        }
+        if (temp === key[0]) {
+          console.log(temp);
+        }
+      }
     }
   });
 }
