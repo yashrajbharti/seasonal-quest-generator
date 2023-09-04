@@ -168,36 +168,36 @@ for (let tab of tabs) {
     selectedTab = tab;
 
     if (tab.textContent === "Catching Tasks") {
-      // console.clear();
+      console.clear();
       catchingTasks = new Map([...catchingTasks.entries()].sort());
-      // console.log(catchingTasks);
+      console.log(catchingTasks);
     }
     if (tab.textContent === "Throwing Tasks") {
-      // console.clear();
+      console.clear();
       throwingTasks = new Map([...throwingTasks.entries()].sort());
-      // console.log(throwingTasks);
+      console.log(throwingTasks);
     }
     if (tab.textContent === "Battling Tasks") {
-      // console.clear();
+      console.clear();
       battlingTasks = new Map([...battlingTasks.entries()].sort());
-      // console.log(battlingTasks);
+      console.log(battlingTasks);
     }
     if (tab.textContent === "Buddy/Friendship Tasks") {
-      // console.clear();
+      console.clear();
       buddyFriendshipTasks = new Map(
         [...buddyFriendshipTasks.entries()].sort()
       );
-      // console.log(buddyFriendshipTasks);
+      console.log(buddyFriendshipTasks);
     }
     if (tab.textContent === "Items Tasks") {
-      // console.clear();
+      console.clear();
       itemsTasks = new Map([...itemsTasks.entries()].sort());
-      // console.log(itemsTasks);
+      console.log(itemsTasks);
     }
     if (tab.textContent === "Miscellaneous Tasks") {
-      // console.clear();
+      console.clear();
       miscellaneousTasks = new Map([...miscellaneousTasks.entries()].sort());
-      // console.log(miscellaneousTasks);
+      console.log(miscellaneousTasks);
     }
   });
 }
