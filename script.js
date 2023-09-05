@@ -198,7 +198,7 @@ for (let tab of tabs) {
       console.clear();
       itemsTasks = new Map([...itemsTasks.entries()].sort());
       console.log(itemsTasks);
-      buildUI(itemsTasks);
+      buildUI(itemsTasks, true);
     }
     if (tab.textContent === "Miscellaneous Tasks") {
       console.clear();
@@ -209,7 +209,7 @@ for (let tab of tabs) {
   });
 }
 
-const buildUI = (tasks) => {
+const buildUI = (tasks, isItem = false) => {
   let temp = "";
   for (let [key, value] of tasks) {
     if (temp !== key[0]) {
@@ -218,14 +218,19 @@ const buildUI = (tasks) => {
       h1.textContent = temp;
       quest.append(h1);
     }
-    if (temp === key[0]) {
-      let h2 = document.createElement("h2");
-      h2.textContent = value
+    if (temp === key[0] && !isItem) {
+      let img = document.createElement("img");
+      img.src = `https://img.pokemondb.net/sprites/home/normal/${value
         .toLowerCase()
         .replace(/(.*) (burmy)/, "$2-$1")
         .replace(/(alolan) (.*)/, "$2-$1")
         .replace(/(hisuian) (.*)/, "$2-$1")
-        .replace(/(galarian) (.*)/, "$2-$1");
+        .replace(/(galarian) (.*)/, "$2-$1")}.png`;
+      quest.append(img);
+    }
+    if (temp === key[0] && isItem) {
+      let h2 = document.createElement("h2");
+      h2.textContent = value;
       quest.append(h2);
     }
   }
