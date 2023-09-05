@@ -119,6 +119,7 @@ body {
     color: #fefafd;
     align-items: center;
     text-transform: uppercase;
+    margin-block: 25px;
 }
 
 .child {
