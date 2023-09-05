@@ -184,16 +184,7 @@ for (let tab of tabs) {
       console.clear();
       battlingTasks = new Map([...battlingTasks.entries()].sort());
       console.log(battlingTasks);
-      let temp = "";
-      for (let [key, value] of battlingTasks) {
-        if (temp === "") temp = key[0];
-        if (temp !== key[0]) {
-          temp = key[0];
-        }
-        if (temp === key[0]) {
-          console.log(temp);
-        }
-      }
+      buildUI(battlingTasks);
     }
     if (tab.textContent === "Buddy/Friendship Tasks") {
       console.clear();
@@ -201,46 +192,19 @@ for (let tab of tabs) {
         [...buddyFriendshipTasks.entries()].sort()
       );
       console.log(buddyFriendshipTasks);
-      let temp = "";
-      for (let [key, value] of buddyFriendshipTasks) {
-        if (temp === "") temp = key[0];
-        if (temp !== key[0]) {
-          temp = key[0];
-        }
-        if (temp === key[0]) {
-          console.log(temp);
-        }
-      }
+      buildUI(buddyFriendshipTasks);
     }
     if (tab.textContent === "Items Tasks") {
       console.clear();
       itemsTasks = new Map([...itemsTasks.entries()].sort());
       console.log(itemsTasks);
-      let temp = "";
-      for (let [key, value] of itemsTasks) {
-        if (temp === "") temp = key[0];
-        if (temp !== key[0]) {
-          temp = key[0];
-        }
-        if (temp === key[0]) {
-          console.log(temp);
-        }
-      }
+      buildUI(itemsTasks);
     }
     if (tab.textContent === "Miscellaneous Tasks") {
       console.clear();
       miscellaneousTasks = new Map([...miscellaneousTasks.entries()].sort());
       console.log(miscellaneousTasks);
-      let temp = "";
-      for (let [key, value] of miscellaneousTasks) {
-        if (temp === "") temp = key[0];
-        if (temp !== key[0]) {
-          temp = key[0];
-        }
-        if (temp === key[0]) {
-          console.log(temp);
-        }
-      }
+      buildUI(miscellaneousTasks);
     }
   });
 }
