@@ -161,13 +161,15 @@ p {
 
 }
 
-.questImagesContainer {
+.questImagesContainer,
+.questItemsContainer {
     position: relative;
     width: 680px;
     display: inline;
 }
 
-.pokemon {
+.pokemon,
+.item {
     height: 100px;
 }
 
@@ -175,4 +177,16 @@ p {
     position: absolute;
     height: 30px;
     translate: -25px 10px;
+}
+
+.megaPokemon {
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    translate: -40px 30px
+}
+
+.megaEnergy {
+    height: 80px;
+    margin-top: 20px;
 }
