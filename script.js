@@ -167,40 +167,18 @@ for (let tab of tabs) {
     title.textContent = tab.textContent;
     title.style.backgroundColor = tab.getAttribute("color");
     selectedTab = tab;
-
+    quest.innerHTML = "";
     if (tab.textContent === "Catching Tasks") {
       console.clear();
       catchingTasks = new Map([...catchingTasks.entries()].sort());
       console.log(catchingTasks);
-      let temp = "";
-      for (let [key, value] of catchingTasks) {
-        if (temp !== key[0]) {
-          temp = key[0];
-          let h1 = document.createElement("h1");
-          h1.textContent = temp;
-          quest.append(h1);
-        }
-        if (temp === key[0]) {
-          let h2 = document.createElement("h2");
-          h2.textContent = value.toLowerCase().replace(/(.*) (burmy)/, "$2-$1");
-          quest.append(h2);
-        }
-      }
+      buildUI(catchingTasks);
     }
     if (tab.textContent === "Throwing Tasks") {
       console.clear();
       throwingTasks = new Map([...throwingTasks.entries()].sort());
       console.log(throwingTasks);
-      let temp = "";
-      for (let [key, value] of throwingTasks) {
-        if (temp === "") temp = key[0];
-        if (temp !== key[0]) {
-          temp = key[0];
-        }
-        if (temp === key[0]) {
-          console.log(temp);
-        }
-      }
+      buildUI(throwingTasks);
     }
     if (tab.textContent === "Battling Tasks") {
       console.clear();
@@ -266,5 +244,23 @@ for (let tab of tabs) {
     }
   });
 }
+
+const buildUI = (tasks) => {
+  let temp = "";
+  for (let [key, value] of tasks) {
+    console.log(key);
+    if (temp !== key[0]) {
+      temp = key[0];
+      let h1 = document.createElement("h1");
+      h1.textContent = temp;
+      quest.append(h1);
+    }
+    if (temp === key[0]) {
+      let h2 = document.createElement("h2");
+      h2.textContent = value.toLowerCase().replace(/(.*) (burmy)/, "$2-$1");
+      quest.append(h2);
+    }
+  }
+};
 
 button.addEventListener("click", () => {});
