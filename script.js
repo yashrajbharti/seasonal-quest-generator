@@ -213,21 +213,30 @@ const buildUI = (tasks, isItem = false) => {
   let temp = "";
   let rightdiv = document.createElement("div");
   rightdiv.classList.add("right");
+
+  let superdiv = document.createElement("div");
+  superdiv.classList.add("master");
+
   let flag = false;
   for (let [key, value] of tasks) {
     if (temp !== key[0]) {
       temp = key[0];
-      if (flag) quest.append(rightdiv);
+      if (flag) {
+        superdiv.append(rightdiv);
+        quest.append(superdiv);
+      }
       flag = true;
       rightdiv = document.createElement("div");
       rightdiv.classList.add("right");
+      superdiv = document.createElement("div");
+      superdiv.classList.add("master");
       let h1 = document.createElement("h1");
       h1.classList.add("questTitle");
       h1.textContent = temp;
       let leftdiv = document.createElement("div");
       leftdiv.classList.add("left");
       leftdiv.append(h1);
-      quest.append(leftdiv);
+      superdiv.append(leftdiv);
     }
     if (temp === key[0] && !isItem) {
       let div = document.createElement("div");
