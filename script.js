@@ -170,19 +170,28 @@ for (let tab of tabs) {
     quest.innerHTML = "";
     if (tab.textContent === "Catching Tasks") {
       console.clear();
-      catchingTasks = new Map([...catchingTasks.entries()].sort());
+      catchingTasks = new Map([...catchingTasks.entries()].sort()).set(
+        [""],
+        ""
+      );
       console.log(catchingTasks);
       buildUI(catchingTasks);
     }
     if (tab.textContent === "Throwing Tasks") {
       console.clear();
-      throwingTasks = new Map([...throwingTasks.entries()].sort());
+      throwingTasks = new Map([...throwingTasks.entries()].sort()).set(
+        [""],
+        ""
+      );
       console.log(throwingTasks);
       buildUI(throwingTasks);
     }
     if (tab.textContent === "Battling Tasks") {
       console.clear();
-      battlingTasks = new Map([...battlingTasks.entries()].sort());
+      battlingTasks = new Map([...battlingTasks.entries()].sort()).set(
+        [""],
+        ""
+      );
       console.log(battlingTasks);
       buildUI(battlingTasks);
     }
@@ -190,19 +199,21 @@ for (let tab of tabs) {
       console.clear();
       buddyFriendshipTasks = new Map(
         [...buddyFriendshipTasks.entries()].sort()
-      );
+      ).set([""], "");
       console.log(buddyFriendshipTasks);
       buildUI(buddyFriendshipTasks);
     }
     if (tab.textContent === "Items Tasks") {
       console.clear();
-      itemsTasks = new Map([...itemsTasks.entries()].sort());
+      itemsTasks = new Map([...itemsTasks.entries()].sort()).set([""], "");
       console.log(itemsTasks);
       buildUI(itemsTasks, true);
     }
     if (tab.textContent === "Miscellaneous Tasks") {
       console.clear();
-      miscellaneousTasks = new Map([...miscellaneousTasks.entries()].sort());
+      miscellaneousTasks = new Map(
+        [...miscellaneousTasks.entries()].sort()
+      ).set([""], "");
       console.log(miscellaneousTasks);
       buildUI(miscellaneousTasks);
     }
@@ -245,12 +256,13 @@ const buildUI = (tasks, isItem = false) => {
       let img2 = document.createElement("img");
       img.classList.add("pokemon");
       img2.classList.add("shiny");
-      img.src = `https://img.pokemondb.net/sprites/home/normal/${value
-        .toLowerCase()
-        .replace(/(.*) (burmy)/, "$2-$1")
-        .replace(/(alolan) (.*)/, "$2-$1")
-        .replace(/(hisuian) (.*)/, "$2-$1")
-        .replace(/(galarian) (.*)/, "$2-$1")}.png`;
+      if (value)
+        img.src = `https://img.pokemondb.net/sprites/home/normal/${value
+          .toLowerCase()
+          .replace(/(.*) (burmy)/, "$2-$1")
+          .replace(/(alolan) (.*)/, "$2-$1")
+          .replace(/(hisuian) (.*)/, "$2-$1")
+          .replace(/(galarian) (.*)/, "$2-$1")}.png`;
       img2.src = "./Images/shiny.png";
       div.append(img);
       div.append(img2);
@@ -278,7 +290,8 @@ const buildUI = (tasks, isItem = false) => {
         }_mega_energy.webp`;
         div.append(img2);
       } else {
-        img.src = `./Images/${value.split(" ")[1].toLowerCase()}.png`;
+        if (value)
+          img.src = `./Images/${value.split(" ")[1].toLowerCase()}.png`;
         img.classList.add("item");
         p.classList.add("itemQuantity");
       }
