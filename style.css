@@ -153,3 +153,24 @@ p {
     font-size: 30px;
     display: inline;
 }
+
+.questTitle {
+    width: 640px;
+    word-wrap: break-word;
+    padding-left: 36px;
+
+}
+
+.questImagesContainer {
+    position: relative;
+}
+
+.pokemon {
+    height: 112px;
+}
+
+.shiny {
+    position: absolute;
+    height: 30px;
+    translate: -25px 10px;
+}

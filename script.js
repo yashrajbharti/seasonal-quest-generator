@@ -223,16 +223,20 @@ const buildUI = (tasks, isItem = false) => {
     }
     if (temp === key[0] && !isItem) {
       let span = document.createElement("span");
-      span.classList.add("questImageContainer");
+      span.classList.add("questImagesContainer");
       let img = document.createElement("img");
+      let img2 = document.createElement("img");
       img.classList.add("pokemon");
+      img2.classList.add("shiny");
       img.src = `https://img.pokemondb.net/sprites/home/normal/${value
         .toLowerCase()
         .replace(/(.*) (burmy)/, "$2-$1")
         .replace(/(alolan) (.*)/, "$2-$1")
         .replace(/(hisuian) (.*)/, "$2-$1")
         .replace(/(galarian) (.*)/, "$2-$1")}.png`;
+      img2.src = "./Images/shiny.png";
       span.append(img);
+      span.append(img2);
       quest.append(span);
     }
     if (temp === key[0] && isItem) {
