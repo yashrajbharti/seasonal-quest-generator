@@ -214,11 +214,14 @@ const buildUI = (tasks, isItem = false) => {
   for (let [key, value] of tasks) {
     if (temp !== key[0]) {
       temp = key[0];
+      let br = document.createElement("br");
+      quest.append(br);
       let h1 = document.createElement("h1");
       h1.textContent = temp;
       quest.append(h1);
     }
     if (temp === key[0] && !isItem) {
+      let span = document.createElement("span");
       let img = document.createElement("img");
       img.src = `https://img.pokemondb.net/sprites/home/normal/${value
         .toLowerCase()
@@ -226,12 +229,23 @@ const buildUI = (tasks, isItem = false) => {
         .replace(/(alolan) (.*)/, "$2-$1")
         .replace(/(hisuian) (.*)/, "$2-$1")
         .replace(/(galarian) (.*)/, "$2-$1")}.png`;
-      quest.append(img);
+      span.append(img);
+      quest.append(span);
     }
     if (temp === key[0] && isItem) {
-      let h2 = document.createElement("h2");
-      h2.textContent = value;
-      quest.append(h2);
+      let p = document.createElement("p");
+      p.textContent = `x ${value.split(" ")[0]}`;
+      let img = document.createElement("img");
+      img.src = value.includes("Mega")
+        ? `https://img.pokemondb.net/sprites/home/normal/${
+            value
+              .toLowerCase()
+              .replace(/(.*) (mega)/, "$1-$2")
+              .split(" ")[1]
+          }.png`
+        : `./Images/${value.split(" ")[1].toLowerCase()}`;
+      quest.append(img);
+      quest.append(p);
     }
   }
 };
