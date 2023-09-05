@@ -223,6 +223,7 @@ const buildUI = (tasks, isItem = false) => {
     }
     if (temp === key[0] && !isItem) {
       let span = document.createElement("span");
+      span.classList.add("questImageContainer");
       let img = document.createElement("img");
       img.src = `https://img.pokemondb.net/sprites/home/normal/${value
         .toLowerCase()
@@ -235,6 +236,7 @@ const buildUI = (tasks, isItem = false) => {
     }
     if (temp === key[0] && isItem) {
       let p = document.createElement("p");
+      p.classList.add("quantity");
       let span = document.createElement("span");
       p.textContent = `x ${value.split(" ")[0]}`;
       let img = document.createElement("img");
