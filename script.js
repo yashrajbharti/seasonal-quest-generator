@@ -298,6 +298,18 @@ document.addEventListener("click", function (e) {
   if (scaleUp) {
     scaleUp.style.scale = 1.3;
   }
+  const scaleUp2 = e.target.closest(".item");
+  if (scaleUp2) {
+    scaleUp2.style.scale = 1.3;
+  }
+  const scaleUp3 = e.target.closest(".megaEnergy");
+  if (scaleUp3) {
+    scaleUp3.style.scale = 1.3;
+  }
+  const scaleUp4 = e.target.closest(".megaPokemon");
+  if (scaleUp4) {
+    scaleUp4.style.scale = 1.3;
+  }
   const download = e.target.closest(".child");
   if (download) {
     console.log("pending");
