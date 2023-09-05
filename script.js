@@ -288,3 +288,18 @@ const buildUI = (tasks, isItem = false) => {
     }
   }
 };
+
+document.addEventListener("click", function (e) {
+  const target = e.target.closest(".shiny"); // Or any other selector.
+  if (target) {
+    target.style.display = "none";
+  }
+  const scaleUp = e.target.closest(".pokemon");
+  if (scaleUp) {
+    scaleUp.style.scale = 1.3;
+  }
+  const download = e.target.closest(".child");
+  if (download) {
+    console.log("pending");
+  }
+});

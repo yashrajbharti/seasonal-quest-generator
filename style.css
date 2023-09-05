@@ -217,3 +217,7 @@ p {
 .itemQuantity {
     translate: -25px 20px
 }
+
+.shiny:hover {
+    opacity: 0.5;
+}
