@@ -212,7 +212,6 @@ for (let tab of tabs) {
 const buildUI = (tasks) => {
   let temp = "";
   for (let [key, value] of tasks) {
-    console.log(key);
     if (temp !== key[0]) {
       temp = key[0];
       let h1 = document.createElement("h1");
@@ -221,7 +220,12 @@ const buildUI = (tasks) => {
     }
     if (temp === key[0]) {
       let h2 = document.createElement("h2");
-      h2.textContent = value.toLowerCase().replace(/(.*) (burmy)/, "$2-$1");
+      h2.textContent = value
+        .toLowerCase()
+        .replace(/(.*) (burmy)/, "$2-$1")
+        .replace(/(alolan) (.*)/, "$2-$1")
+        .replace(/(hisuian) (.*)/, "$2-$1")
+        .replace(/(galarian) (.*)/, "$2-$1");
       quest.append(h2);
     }
   }
