@@ -280,10 +280,11 @@ const buildUI = (tasks, isItem = false) => {
       } else {
         img.src = `./Images/${value.split(" ")[1].toLowerCase()}.png`;
         img.classList.add("item");
+        p.classList.add("itemQuantity");
       }
       div.append(img);
+      div.append(p);
       rightdiv.append(div);
-      rightdiv.append(p);
     }
   }
 };

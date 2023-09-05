@@ -150,40 +150,39 @@ h1 {
 }
 
 p {
-    font-size: 30px;
+    font-size: 20px;
     display: inline;
+    text-transform: lowercase;
 }
 
 .pokemon,
-.item {
+.item,
+.megaEnergy {
     height: 100px;
 }
 
 .shiny {
     position: absolute;
     height: 30px;
-    translate: -25px 10px;
+    translate: -27px 10px;
 }
 
 .megaPokemon {
-    height: 70px;
+    height: 50px;
     position: absolute;
     z-index: 2;
-    translate: -40px 30px
+    translate: -40px 50px
 }
 
-.megaEnergy {
-    height: 80px;
-}
+
 
 .quantity {
     position: absolute;
     z-index: 3;
+    translate: -10px 20px
 }
 
-.questItemsContainer:has(.megaPokemon)+.quantity {
-    margin-left: 30px;
-}
+
 
 .master {
     display: flex;
@@ -203,4 +202,18 @@ p {
     flex-wrap: wrap;
     padding: 36px;
     translate: 0 -10px;
+}
+
+.megaEnergy {
+    height: 80px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.item {
+    padding: 15px;
+}
+
+.itemQuantity {
+    translate: -25px 20px
 }
