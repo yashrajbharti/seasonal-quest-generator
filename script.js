@@ -8,8 +8,7 @@ let battlingTasks = new Map();
 let buddyFriendshipTasks = new Map();
 let itemsTasks = new Map();
 let miscellaneousTasks = new Map();
-let questLabel = document.querySelector(".questLabel");
-let questImage = document.querySelector(".questImage");
+let quest = document.querySelector(".quest");
 
 let getSeasonalQuestData = async () => {
   // Replace ./data.json with your JSON feed
@@ -175,12 +174,16 @@ for (let tab of tabs) {
       console.log(catchingTasks);
       let temp = "";
       for (let [key, value] of catchingTasks) {
-        if (temp === "") temp = key[0];
         if (temp !== key[0]) {
           temp = key[0];
+          let h1 = document.createElement("h1");
+          h1.textContent = temp;
+          quest.append(h1);
         }
         if (temp === key[0]) {
-          console.log(temp);
+          let h2 = document.createElement("h2");
+          h2.textContent = value;
+          quest.append(h2);
         }
       }
     }
