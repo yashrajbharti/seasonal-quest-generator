@@ -224,7 +224,10 @@ const buildUI = (tasks, isItem = false) => {
       let h1 = document.createElement("h1");
       h1.classList.add("questTitle");
       h1.textContent = temp;
-      quest.append(h1);
+      let leftdiv = document.createElement("div");
+      leftdiv.classList.add("left");
+      leftdiv.append(h1);
+      quest.append(leftdiv);
     }
     if (temp === key[0] && !isItem) {
       let div = document.createElement("div");
