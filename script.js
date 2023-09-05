@@ -8,6 +8,8 @@ let battlingTasks = new Map();
 let buddyFriendshipTasks = new Map();
 let itemsTasks = new Map();
 let miscellaneousTasks = new Map();
+let questLabel = document.querySelector(".questLabel");
+let questImage = document.querySelector(".questImage");
 
 let getSeasonalQuestData = async () => {
   // Replace ./data.json with your JSON feed
