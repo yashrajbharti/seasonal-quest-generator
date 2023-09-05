@@ -217,6 +217,7 @@ const buildUI = (tasks, isItem = false) => {
       let br = document.createElement("br");
       quest.append(br);
       let h1 = document.createElement("h1");
+      h1.classList.add("questTitle");
       h1.textContent = temp;
       quest.append(h1);
     }
@@ -234,17 +235,26 @@ const buildUI = (tasks, isItem = false) => {
     }
     if (temp === key[0] && isItem) {
       let p = document.createElement("p");
+      let span = document.createElement("span");
       p.textContent = `x ${value.split(" ")[0]}`;
       let img = document.createElement("img");
-      img.src = value.includes("Mega")
-        ? `https://img.pokemondb.net/sprites/home/normal/${
-            value
-              .toLowerCase()
-              .replace(/(.*) (mega)/, "$1-$2")
-              .split(" ")[1]
-          }.png`
-        : `./Images/${value.split(" ")[1].toLowerCase()}`;
-      quest.append(img);
+      if (value.includes("Mega")) {
+        let img2 = document.createElement("img");
+        img.src = `https://img.pokemondb.net/sprites/home/normal/${
+          value
+            .toLowerCase()
+            .replace(/(.*) (mega)/, "$1")
+            .split(" ")[1]
+        }.png`;
+        img2.src = `./Images/mega/${
+          value.split(" ")[1][0].toUpperCase() + value.split(" ")[1].slice(1)
+        }_mega_energy.webp`;
+        span.append(img2);
+      } else {
+        img.src = `./Images/${value.split(" ")[1].toLowerCase()}.png`;
+      }
+      span.append(img);
+      quest.append(span);
       quest.append(p);
     }
   }
