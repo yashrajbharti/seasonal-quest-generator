@@ -182,7 +182,7 @@ for (let tab of tabs) {
         }
         if (temp === key[0]) {
           let h2 = document.createElement("h2");
-          h2.textContent = value;
+          h2.textContent = value.toLowerCase().replace(/(.*) (burmy)/, "$2-$1");
           quest.append(h2);
         }
       }
