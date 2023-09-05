@@ -154,20 +154,6 @@ p {
     display: inline;
 }
 
-.questTitle {
-    width: 640px;
-    word-wrap: break-word;
-    padding-left: 36px;
-
-}
-
-.questImagesContainer,
-.questItemsContainer {
-    position: relative;
-    width: 680px;
-    display: inline;
-}
-
 .pokemon,
 .item {
     height: 100px;
@@ -188,14 +174,33 @@ p {
 
 .megaEnergy {
     height: 80px;
-    margin-top: 20px;
 }
 
 .quantity {
-    position: relative;
+    position: absolute;
     z-index: 3;
 }
 
 .questItemsContainer:has(.megaPokemon)+.quantity {
     margin-left: 30px;
+}
+
+.master {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1041px;
+}
+
+
+.left {
+    width: 60%;
+    padding: 36px;
+}
+
+.right {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 36px;
+    translate: 0 -10px;
 }
