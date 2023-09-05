@@ -211,6 +211,7 @@ for (let tab of tabs) {
 
 const buildUI = (tasks, isItem = false) => {
   let temp = "";
+  let superdiv;
   for (let [key, value] of tasks) {
     if (temp !== key[0]) {
       temp = key[0];
