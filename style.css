@@ -163,10 +163,12 @@ p {
 
 .questImagesContainer {
     position: relative;
+    width: 680px;
+    display: inline;
 }
 
 .pokemon {
-    height: 112px;
+    height: 100px;
 }
 
 .shiny {

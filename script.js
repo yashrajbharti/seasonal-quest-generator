@@ -222,8 +222,8 @@ const buildUI = (tasks, isItem = false) => {
       quest.append(h1);
     }
     if (temp === key[0] && !isItem) {
-      let span = document.createElement("span");
-      span.classList.add("questImagesContainer");
+      let div = document.createElement("div");
+      div.classList.add("questImagesContainer");
       let img = document.createElement("img");
       let img2 = document.createElement("img");
       img.classList.add("pokemon");
@@ -235,15 +235,15 @@ const buildUI = (tasks, isItem = false) => {
         .replace(/(hisuian) (.*)/, "$2-$1")
         .replace(/(galarian) (.*)/, "$2-$1")}.png`;
       img2.src = "./Images/shiny.png";
-      span.append(img);
-      span.append(img2);
-      quest.append(span);
+      div.append(img);
+      div.append(img2);
+      quest.append(div);
     }
     if (temp === key[0] && isItem) {
       let p = document.createElement("p");
       p.classList.add("quantity");
-      let span = document.createElement("span");
-      span.classList.add("questItemsContainer");
+      let div = document.createElement("div");
+      div.classList.add("questItemsContainer");
       p.textContent = `x ${value.split(" ")[0]}`;
       let img = document.createElement("img");
       if (value.includes("Mega")) {
@@ -259,13 +259,13 @@ const buildUI = (tasks, isItem = false) => {
         img2.src = `./Images/mega/${
           value.split(" ")[1][0].toUpperCase() + value.split(" ")[1].slice(1)
         }_mega_energy.webp`;
-        span.append(img2);
+        div.append(img2);
       } else {
         img.src = `./Images/${value.split(" ")[1].toLowerCase()}.png`;
         img.classList.add("item");
       }
-      span.append(img);
-      quest.append(span);
+      div.append(img);
+      quest.append(div);
       quest.append(p);
     }
   }
