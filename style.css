@@ -190,3 +190,12 @@ p {
     height: 80px;
     margin-top: 20px;
 }
+
+.quantity {
+    position: relative;
+    z-index: 3;
+}
+
+.questItemsContainer:has(.megaPokemon)+.quantity {
+    margin-left: 30px;
+}
