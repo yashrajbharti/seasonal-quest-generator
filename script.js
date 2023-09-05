@@ -211,12 +211,16 @@ for (let tab of tabs) {
 
 const buildUI = (tasks, isItem = false) => {
   let temp = "";
-  let superdiv;
+  let rightdiv = document.createElement("div");
+  rightdiv.classList.add("right");
+  let flag = false;
   for (let [key, value] of tasks) {
     if (temp !== key[0]) {
       temp = key[0];
-      let br = document.createElement("br");
-      quest.append(br);
+      if (flag) quest.append(rightdiv);
+      flag = true;
+      rightdiv = document.createElement("div");
+      rightdiv.classList.add("right");
       let h1 = document.createElement("h1");
       h1.classList.add("questTitle");
       h1.textContent = temp;
@@ -238,7 +242,7 @@ const buildUI = (tasks, isItem = false) => {
       img2.src = "./Images/shiny.png";
       div.append(img);
       div.append(img2);
-      quest.append(div);
+      rightdiv.append(div);
     }
     if (temp === key[0] && isItem) {
       let p = document.createElement("p");
@@ -266,8 +270,8 @@ const buildUI = (tasks, isItem = false) => {
         img.classList.add("item");
       }
       div.append(img);
-      quest.append(div);
-      quest.append(p);
+      rightdiv.append(div);
+      rightdiv.append(p);
     }
   }
 };
