@@ -225,6 +225,7 @@ const buildUI = (tasks, isItem = false) => {
       let span = document.createElement("span");
       span.classList.add("questImageContainer");
       let img = document.createElement("img");
+      img.classList.add("pokemon");
       img.src = `https://img.pokemondb.net/sprites/home/normal/${value
         .toLowerCase()
         .replace(/(.*) (burmy)/, "$2-$1")
@@ -238,10 +239,13 @@ const buildUI = (tasks, isItem = false) => {
       let p = document.createElement("p");
       p.classList.add("quantity");
       let span = document.createElement("span");
+      span.classList.add("questItemsContainer");
       p.textContent = `x ${value.split(" ")[0]}`;
       let img = document.createElement("img");
       if (value.includes("Mega")) {
         let img2 = document.createElement("img");
+        img.classList.add("megaPokemon");
+        img2.classList.add("megaEnergy");
         img.src = `https://img.pokemondb.net/sprites/home/normal/${
           value
             .toLowerCase()
@@ -254,6 +258,7 @@ const buildUI = (tasks, isItem = false) => {
         span.append(img2);
       } else {
         img.src = `./Images/${value.split(" ")[1].toLowerCase()}.png`;
+        img.classList.add("item");
       }
       span.append(img);
       quest.append(span);
