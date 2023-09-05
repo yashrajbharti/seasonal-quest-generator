@@ -266,5 +266,3 @@ const buildUI = (tasks, isItem = false) => {
     }
   }
 };
-
-// button.addEventListener("click", () => {});
