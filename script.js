@@ -160,7 +160,7 @@ let parent = document.querySelector(".container");
 let tabs = document.querySelectorAll(".tasks");
 let title = document.querySelector(".child");
 let selectedTab = document.querySelectorAll(".tasks")[0];
-let button = document.querySelector(".button-name");
+// let button = document.querySelector(".button-name");
 
 for (let tab of tabs) {
   tab.addEventListener("click", () => {
@@ -227,4 +227,4 @@ const buildUI = (tasks) => {
   }
 };
 
-button.addEventListener("click", () => {});
+// button.addEventListener("click", () => {});

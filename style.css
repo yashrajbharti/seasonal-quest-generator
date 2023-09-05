@@ -63,7 +63,7 @@ body {
 }
 
 .button-container {
-    position: absolute;
+    position: fixed;
     left: 50%;
     translate: -50% 0;
     bottom: 30px;
