@@ -266,6 +266,7 @@ const buildUI = (tasks, isItem = false) => {
       img2.src = "./Images/shiny.png";
       div.append(img);
       div.append(img2);
+      console.log(div);
       rightdiv.append(div);
     }
     if (temp === key[0] && isItem) {
