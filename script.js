@@ -170,28 +170,19 @@ for (let tab of tabs) {
     quest.innerHTML = "";
     if (tab.textContent === "Catching Tasks") {
       console.clear();
-      catchingTasks = new Map([...catchingTasks.entries()].sort()).set(
-        [""],
-        ""
-      );
+      catchingTasks = new Map([...catchingTasks.entries()].sort());
       console.log(catchingTasks);
       serializeUI(catchingTasks);
     }
     if (tab.textContent === "Throwing Tasks") {
       console.clear();
-      throwingTasks = new Map([...throwingTasks.entries()].sort()).set(
-        [""],
-        ""
-      );
+      throwingTasks = new Map([...throwingTasks.entries()].sort());
       console.log(throwingTasks);
       serializeUI(throwingTasks);
     }
     if (tab.textContent === "Battling Tasks") {
       console.clear();
-      battlingTasks = new Map([...battlingTasks.entries()].sort()).set(
-        [""],
-        ""
-      );
+      battlingTasks = new Map([...battlingTasks.entries()].sort());
       console.log(battlingTasks);
       serializeUI(battlingTasks);
     }
@@ -199,21 +190,19 @@ for (let tab of tabs) {
       console.clear();
       buddyFriendshipTasks = new Map(
         [...buddyFriendshipTasks.entries()].sort()
-      ).set([""], "");
+      );
       console.log(buddyFriendshipTasks);
       serializeUI(buddyFriendshipTasks);
     }
     if (tab.textContent === "Items Tasks") {
       console.clear();
-      itemsTasks = new Map([...itemsTasks.entries()].sort()).set([""], "");
+      itemsTasks = new Map([...itemsTasks.entries()].sort());
       console.log(itemsTasks);
       serializeUI(itemsTasks, true);
     }
     if (tab.textContent === "Miscellaneous Tasks") {
       console.clear();
-      miscellaneousTasks = new Map(
-        [...miscellaneousTasks.entries()].sort()
-      ).set([""], "");
+      miscellaneousTasks = new Map([...miscellaneousTasks.entries()].sort());
       console.log(miscellaneousTasks);
       serializeUI(miscellaneousTasks);
     }
@@ -224,14 +213,35 @@ const serializeUI = (tasks) => {
   const serializerMap = new Map();
   console.clear();
   for (let [key, value] of tasks) {
-    if (!serializerMap.has(...key)) serializerMap.set(...key, value);
-    else serializerMap.set(...key, serializerMap.get(...key) + "#" + value);
+    if (!serializerMap.has(...key))
+      serializerMap.set(
+        ...key,
+        value
+          .toLowerCase()
+          .replace(/(.*) (burmy)/, "$2-$1")
+          .replace(/(alolan) (.*)/, "$2-$1")
+          .replace(/(hisuian) (.*)/, "$2-$1")
+          .replace(/(galarian) (.*)/, "$2-$1")
+      );
+    else
+      serializerMap.set(
+        ...key,
+        serializerMap.get(...key) +
+          "#" +
+          value
+            .toLowerCase()
+            .replace(/(.*) (burmy)/, "$2-$1")
+            .replace(/(alolan) (.*)/, "$2-$1")
+            .replace(/(hisuian) (.*)/, "$2-$1")
+            .replace(/(galarian) (.*)/, "$2-$1")
+      );
   }
   serializeImages(serializerMap);
 };
 
-const serializeImages = (items) => {
-  for (let [key, value] of items) {
+const serializeImages = (tasks) => {
+  console.clear();
+  for (let [key, value] of tasks) {
     console.log(value);
   }
 };
@@ -240,6 +250,7 @@ const serializeImages = (items) => {
  * Needs Changes
  */
 const buildUI = (tasks, isItem = false) => {
+  tasks.set([""], "");
   let temp = "";
   let rightdiv = document.createElement("div");
   rightdiv.classList.add("right");
@@ -276,12 +287,7 @@ const buildUI = (tasks, isItem = false) => {
       img.classList.add("pokemon");
       img2.classList.add("shiny");
       if (value)
-        img.src = `https://img.pokemondb.net/sprites/home/normal/${value
-          .toLowerCase()
-          .replace(/(.*) (burmy)/, "$2-$1")
-          .replace(/(alolan) (.*)/, "$2-$1")
-          .replace(/(hisuian) (.*)/, "$2-$1")
-          .replace(/(galarian) (.*)/, "$2-$1")}.png`;
+        img.src = `https://img.pokemondb.net/sprites/home/normal/${value}.png`;
       img2.src = "./Images/shiny.png";
       div.append(img);
       div.append(img2);
