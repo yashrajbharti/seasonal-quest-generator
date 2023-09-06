@@ -166,7 +166,7 @@ p {
 .shiny {
     position: absolute;
     height: 30px;
-    translate: -27px 10px;
+    translate: -20px 10px;
 }
 
 .megaPokemon {
@@ -222,4 +222,8 @@ p {
 
 .shiny:hover {
     opacity: 0.5;
+}
+
+.right:has(.item) .item {
+    margin: 5px;
 }
