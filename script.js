@@ -299,15 +299,34 @@ const serializeImages = async (tasks, category = "Default") => {
 };
 
 const serializeTitles = (tasks, category) => {
-  console.clear();
   let titles = [...tasks.keys()];
   let sortedTitle = [];
   switch (category) {
     case "Catching": {
-      console.log;
+      console.clear();
+      sortedTitle = titles.sort((a, b) => {
+        if (a.includes("dragon"))
+          return a.split(" ")[2].length - b.split(" ")[2].length;
+        if (a.includes("Catch"))
+          return parseInt(a.split(" ")[1]) - parseInt(b.split(" ")[1]);
+        if (a.includes("Use"))
+          return (
+            parseInt(a.split(" ")[0].length) - parseInt(b.split(" ")[0].length)
+          );
+      });
+      console.log(sortedTitle);
       break;
     }
     case "Throwing": {
+      console.clear();
+      sortedTitle = titles
+        .sort((a, b) => a.length - b.length)
+        .sort((a, b) => parseInt(a.split(" ")[1]) - parseInt(b.split(" ")[1]))
+        .sort(
+          (a, b) =>
+            parseInt(a.split(" ")[2].length) - parseInt(b.split(" ")[2].length)
+        );
+      console.log(sortedTitle);
       break;
     }
     case "Battling": {
