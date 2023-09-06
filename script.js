@@ -191,19 +191,19 @@ for (let tab of tabs) {
       console.clear();
       catchingTasks = new Map([...catchingTasks.entries()].sort());
       console.log(catchingTasks);
-      serializeUI(catchingTasks);
+      serializeUI(catchingTasks, "Catching");
     }
     if (tab.textContent === "Throwing Tasks") {
       console.clear();
       throwingTasks = new Map([...throwingTasks.entries()].sort());
       console.log(throwingTasks);
-      serializeUI(throwingTasks);
+      serializeUI(throwingTasks, "Throwing");
     }
     if (tab.textContent === "Battling Tasks") {
       console.clear();
       battlingTasks = new Map([...battlingTasks.entries()].sort());
       console.log(battlingTasks);
-      serializeUI(battlingTasks);
+      serializeUI(battlingTasks, "Battling");
     }
     if (tab.textContent.split("/")[0] === "Buddy") {
       console.clear();
@@ -211,24 +211,24 @@ for (let tab of tabs) {
         [...buddyFriendshipTasks.entries()].sort()
       );
       console.log(buddyFriendshipTasks);
-      serializeUI(buddyFriendshipTasks);
+      serializeUI(buddyFriendshipTasks, "Buddy");
     }
     if (tab.textContent === "Items Tasks") {
       console.clear();
       itemsTasks = new Map([...itemsTasks.entries()].sort());
       console.log(itemsTasks);
-      serializeUI(itemsTasks, true);
+      serializeUI(itemsTasks, "Items");
     }
     if (tab.textContent === "Miscellaneous Tasks") {
       console.clear();
       miscellaneousTasks = new Map([...miscellaneousTasks.entries()].sort());
       console.log(miscellaneousTasks);
-      serializeUI(miscellaneousTasks);
+      serializeUI(miscellaneousTasks, "Miscellaneous");
     }
   });
 }
 
-const serializeUI = (tasks, isItem = false) => {
+const serializeUI = (tasks, category = "Default") => {
   const serializerMap = new Map();
   console.clear();
   for (let [key, value] of tasks) {
@@ -255,15 +255,16 @@ const serializeUI = (tasks, isItem = false) => {
             .replace(/(galarian) (.*)/, "$2-$1")
       );
   }
-  serializeImages(serializerMap, isItem);
+  serializeImages(serializerMap, category);
 };
 
-const serializeImages = async (tasks, isItem = false) => {
+const serializeImages = async (tasks, category = "Default") => {
   let serializerImagesMap = new Map();
   let pokedexdata = completePokedex;
-  if (!isItem)
-    for (let [key, value] of tasks) {
-      let sortedValue = value
+  let sortedValue;
+  for (let [key, value] of tasks) {
+    if (category !== "Items") {
+      sortedValue = value
         .split("#")
         .sort((a, b) => {
           if (a.split("-")[0] !== b.split("-")[0])
@@ -274,16 +275,32 @@ const serializeImages = async (tasks, isItem = false) => {
           if (a.split("-")[0] === b.split("-")[0]) return a.length - b.length;
         })
         .join("#");
-
-      serializerImagesMap.set(key, sortedValue);
-      console.log(sortedValue);
     }
+    if (category === "Items") {
+      if (value.includes("mega"))
+        sortedValue = value
+          .split("#")
+          .sort((a, b) =>
+            parseInt(
+              pokedexdata[a.split(" ")[1]] - pokedexdata[b.split(" ")[1]]
+            )
+          )
+          .join("#");
+      else
+        sortedValue = value
+          .split("#")
+          .sort((a, b) => a - b)
+          .join("#");
+    }
+    serializerImagesMap.set(key, sortedValue);
+    console.log(sortedValue);
+  }
+  console.log(serializerImagesMap);
 };
-
 /*
  * Needs Changes
  */
-const buildUI = (tasks, isItem = false) => {
+const buildUI = (tasks, category = "Default") => {
   tasks.set([""], "");
   let temp = "";
   let rightdiv = document.createElement("div");
@@ -313,7 +330,7 @@ const buildUI = (tasks, isItem = false) => {
       leftdiv.append(h1);
       superdiv.append(leftdiv);
     }
-    if (temp === key[0] && !isItem) {
+    if (temp === key[0] && category !== "Items") {
       let div = document.createElement("div");
       div.classList.add("questImagesContainer");
       let img = document.createElement("img");
@@ -327,7 +344,7 @@ const buildUI = (tasks, isItem = false) => {
       div.append(img2);
       rightdiv.append(div);
     }
-    if (temp === key[0] && isItem) {
+    if (temp === key[0] && category === "Items") {
       let p = document.createElement("p");
       p.classList.add("quantity");
       let div = document.createElement("div");
