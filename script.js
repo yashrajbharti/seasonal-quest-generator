@@ -295,8 +295,20 @@ const serializeImages = async (tasks, category = "Default") => {
     serializerImagesMap.set(key, sortedValue);
     console.log(sortedValue);
   }
-  console.log(serializerImagesMap);
+  serializeTitles(serializerImagesMap, category);
 };
+
+const serializeTitles = (tasks, category) => {
+  console.clear();
+  switch (category) {
+    case "Catching": {
+      alert("Catch");
+      break;
+    }
+  }
+  console.log(tasks, category);
+};
+
 /*
  * Needs Changes
  */
