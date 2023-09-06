@@ -301,8 +301,10 @@ const serializeImages = async (tasks, category = "Default") => {
 const serializeTitles = (tasks, category) => {
   console.clear();
   let titles = [...tasks.keys()];
+  let sortedTitle = [];
   switch (category) {
     case "Catching": {
+      console.log;
       break;
     }
     case "Throwing": {
@@ -319,6 +321,11 @@ const serializeTitles = (tasks, category) => {
     }
     case "Miscellaneous": {
       break;
+    }
+    default: {
+      console.log(
+        "This shouldn't have happened. It belongs to none of the categories. Please fix it."
+      );
     }
   }
 };
