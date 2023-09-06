@@ -9,6 +9,7 @@ let buddyFriendshipTasks = new Map();
 let itemsTasks = new Map();
 let miscellaneousTasks = new Map();
 let quest = document.querySelector(".quest");
+let completePokedex;
 
 let getSeasonalQuestData = async () => {
   // Replace ./data.json with your JSON feed
@@ -27,6 +28,24 @@ let getSeasonalQuestData = async () => {
     });
 };
 getSeasonalQuestData();
+
+let getPokedexInfo = async () => {
+  // Replace ./data.json with your JSON feed
+  await fetch("./data/pokedexdata.json")
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      // Work with JSON data here
+
+      completePokedex = data;
+    })
+    .catch((err) => {
+      console.log(err);
+      // Do something for an error here
+    });
+};
+getPokedexInfo();
 
 let buildArray = (text) => {
   let questArray = [];
@@ -209,7 +228,7 @@ for (let tab of tabs) {
   });
 }
 
-const serializeUI = (tasks) => {
+const serializeUI = (tasks, isItem = false) => {
   const serializerMap = new Map();
   console.clear();
   for (let [key, value] of tasks) {
@@ -236,15 +255,24 @@ const serializeUI = (tasks) => {
             .replace(/(galarian) (.*)/, "$2-$1")
       );
   }
-  serializeImages(serializerMap);
+  serializeImages(serializerMap, isItem);
 };
 
-const serializeImages = (tasks) => {
+const serializeImages = async (tasks, isItem = false) => {
+  if (isItem) alert("hahah");
   let serializerImagesMap = new Map();
+  let pokedexdata = completePokedex;
   for (let [key, value] of tasks) {
-    let sortedValue = "";
+    let sortedValue = value
+      .split("#")
+      .sort((a, b) => {
+        parseInt(pokedexdata[a.split("-")[0]]) -
+          parseInt(pokedexdata[b.split("-")[0]]);
+      })
+      .join("#");
 
     serializerImagesMap.set(key, sortedValue);
+    console.log(sortedValue);
   }
 };
 
