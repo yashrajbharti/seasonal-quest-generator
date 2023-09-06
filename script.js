@@ -298,22 +298,31 @@ const serializeImages = async (tasks, category = "Default") => {
   serializeTitles(serializerImagesMap, category);
 };
 
-const serializeTitles = (tasks, category) => {
+const serializeTitles = (tasks, category = "Default") => {
   let titles = [...tasks.keys()];
   let sortedTitle = [];
   switch (category) {
     case "Catching": {
       console.clear();
-      sortedTitle = titles.sort((a, b) => {
-        if (a.includes("dragon"))
-          return a.split(" ")[2].length - b.split(" ")[2].length;
-        if (a.includes("Catch"))
-          return parseInt(a.split(" ")[1]) - parseInt(b.split(" ")[1]);
-        if (a.includes("Use"))
-          return (
-            parseInt(a.split(" ")[0].length) - parseInt(b.split(" ")[0].length)
-          );
-      });
+      sortedTitle = titles
+        .sort((a, b) => {
+          if (a.includes("dragon"))
+            return a.split(" ")[2].length - b.split(" ")[2].length;
+          if (a.includes("Catch"))
+            return parseInt(a.split(" ")[1]) - parseInt(b.split(" ")[1]);
+        })
+        .sort((a, b) => {
+          if (a.includes("Catch 5")) {
+            return a.length - b.length;
+          }
+        })
+        .sort((a, b) => {
+          if (a.includes("Use"))
+            return (
+              parseInt(a.split(" ")[0].length) -
+              parseInt(b.split(" ")[0].length)
+            );
+        });
       console.log(sortedTitle);
       break;
     }
@@ -322,23 +331,58 @@ const serializeTitles = (tasks, category) => {
       sortedTitle = titles
         .sort((a, b) => a.length - b.length)
         .sort((a, b) => parseInt(a.split(" ")[1]) - parseInt(b.split(" ")[1]))
-        .sort(
-          (a, b) =>
-            parseInt(a.split(" ")[2].length) - parseInt(b.split(" ")[2].length)
-        );
+        .sort((a, b) => a.split(" ")[2].length - b.split(" ")[2].length);
       console.log(sortedTitle);
       break;
     }
     case "Battling": {
+      console.clear();
+      sortedTitle = titles
+        .sort((a, b) => {
+          return parseInt(a.split(" ")[1]) - parseInt(b.split(" ")[1]);
+        })
+        .sort((a, b) => {
+          if (a.includes("Win a")) return 0 - parseInt(b.split(" ")[1]);
+        })
+        .sort((a, b) => a.split(" ")[0].length - b.split(" ")[0].length);
+      console.log(sortedTitle);
       break;
     }
     case "Buddy": {
+      console.clear();
+      sortedTitle = titles;
+      console.log(sortedTitle);
       break;
     }
     case "Items": {
+      console.clear();
+      sortedTitle = titles.sort((a, b) => {
+        if (a.includes("Catch"))
+          return parseInt(a.split(" ")[1]) - parseInt(b.split(" ")[1]);
+        if (a.includes("Make")) return a.length - b.length;
+        if (a.includes("Power"))
+          return parseInt(a.split(" ")[3]) - parseInt(b.split(" ")[3]);
+      });
+      console.log(sortedTitle);
       break;
     }
     case "Miscellaneous": {
+      console.clear();
+      sortedTitle = titles
+        .sort((a, b) => {
+          if (a.includes("Hatch") && b.includes("Hatch"))
+            return b.split(" ")[1].length - a.split(" ")[1].length;
+          if (a.includes("Take") && b.includes("Take"))
+            return a.length - b.length;
+          if (a.includes("Purify"))
+            return parseInt(a.split(" ")[1]) - parseInt(b.split(" ")[1]);
+        })
+        .sort((a, b) => {
+          if (a.includes("Take") || a.includes("Spin")) {
+            return a.split(" ")[0].length - b.split(" ")[0].length;
+          }
+        });
+      console.log(sortedTitle);
       break;
     }
     default: {
@@ -347,6 +391,14 @@ const serializeTitles = (tasks, category) => {
       );
     }
   }
+  fragmentUI(sortedTitle, tasks, category);
+};
+
+const fragmentUI = (titles, map, category) => {
+  let fragmentedMap = new Map();
+  console.clear();
+
+  console.log(map);
 };
 
 /*
