@@ -300,6 +300,7 @@ const serializeImages = async (tasks, category = "Default") => {
 
 const serializeTitles = (tasks, category) => {
   console.clear();
+  let titles = [...tasks.keys()];
   switch (category) {
     case "Catching": {
       break;
@@ -320,7 +321,6 @@ const serializeTitles = (tasks, category) => {
       break;
     }
   }
-  console.log(tasks);
 };
 
 /*
@@ -430,3 +430,5 @@ document.addEventListener("click", function (e) {
     console.log("pending");
   }
 });
+
+// BUILD A KANBAN BOARD
