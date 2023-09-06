@@ -215,91 +215,96 @@ for (let tab of tabs) {
         [...miscellaneousTasks.entries()].sort()
       ).set([""], "");
       console.log(miscellaneousTasks);
-      buildUI(miscellaneousTasks);
+      serializeUI(miscellaneousTasks);
     }
   });
 }
 
-const buildUI = (tasks, isItem = false) => {
+const serializeUI = (tasks, isItem = false) => {
   let temp = "";
-  let rightdiv = document.createElement("div");
-  rightdiv.classList.add("right");
+  // let rightdiv = document.createElement("div");
+  // rightdiv.classList.add("right");
 
-  let superdiv = document.createElement("div");
-  superdiv.classList.add("master");
+  // let superdiv = document.createElement("div");
+  // superdiv.classList.add("master");
+  const serializer = new Map();
 
   let flag = false;
   for (let [key, value] of tasks) {
+    if (!serializer.has(...key)) serializer.set(...key, value);
+    else serializer.set(...key, serializer.get(...key) + "#" + value);
+
     if (temp !== key[0]) {
       temp = key[0];
       if (flag) {
-        superdiv.append(rightdiv);
-        quest.append(superdiv);
+        // superdiv.append(rightdiv);
+        // quest.append(superdiv);
       }
       flag = true;
-      rightdiv = document.createElement("div");
-      rightdiv.classList.add("right");
-      superdiv = document.createElement("div");
-      superdiv.classList.add("master");
-      let h1 = document.createElement("h1");
-      h1.classList.add("questTitle");
-      h1.textContent = temp;
-      let leftdiv = document.createElement("div");
-      leftdiv.classList.add("left");
-      leftdiv.append(h1);
-      superdiv.append(leftdiv);
+      // rightdiv = document.createElement("div");
+      // rightdiv.classList.add("right");
+      // superdiv = document.createElement("div");
+      // superdiv.classList.add("master");
+      // let h1 = document.createElement("h1");
+      // h1.classList.add("questTitle");
+      // h1.textContent = temp;
+      // let leftdiv = document.createElement("div");
+      // leftdiv.classList.add("left");
+      // leftdiv.append(h1);
+      // superdiv.append(leftdiv);
     }
     if (temp === key[0] && !isItem) {
-      let div = document.createElement("div");
-      div.classList.add("questImagesContainer");
-      let img = document.createElement("img");
-      let img2 = document.createElement("img");
-      img.classList.add("pokemon");
-      img2.classList.add("shiny");
-      if (value)
-        img.src = `https://img.pokemondb.net/sprites/home/normal/${value
-          .toLowerCase()
-          .replace(/(.*) (burmy)/, "$2-$1")
-          .replace(/(alolan) (.*)/, "$2-$1")
-          .replace(/(hisuian) (.*)/, "$2-$1")
-          .replace(/(galarian) (.*)/, "$2-$1")}.png`;
-      img2.src = "./Images/shiny.png";
-      div.append(img);
-      div.append(img2);
-      rightdiv.append(div);
+      // let div = document.createElement("div");
+      // div.classList.add("questImagesContainer");
+      // let img = document.createElement("img");
+      // let img2 = document.createElement("img");
+      // img.classList.add("pokemon");
+      // img2.classList.add("shiny");
+      // if (value)
+      //   img.src = `https://img.pokemondb.net/sprites/home/normal/${value
+      //     .toLowerCase()
+      //     .replace(/(.*) (burmy)/, "$2-$1")
+      //     .replace(/(alolan) (.*)/, "$2-$1")
+      //     .replace(/(hisuian) (.*)/, "$2-$1")
+      //     .replace(/(galarian) (.*)/, "$2-$1")}.png`;
+      // img2.src = "./Images/shiny.png";
+      // div.append(img);
+      // div.append(img2);
+      // rightdiv.append(div);
     }
     if (temp === key[0] && isItem) {
-      let p = document.createElement("p");
-      p.classList.add("quantity");
-      let div = document.createElement("div");
-      div.classList.add("questItemsContainer");
-      p.textContent = `x ${value.split(" ")[0]}`;
-      let img = document.createElement("img");
+      // let p = document.createElement("p");
+      // p.classList.add("quantity");
+      // let div = document.createElement("div");
+      // div.classList.add("questItemsContainer");
+      // p.textContent = `x ${value.split(" ")[0]}`;
+      // let img = document.createElement("img");
       if (value.includes("Mega")) {
-        let img2 = document.createElement("img");
-        img.classList.add("megaPokemon");
-        img2.classList.add("megaEnergy");
-        img.src = `https://img.pokemondb.net/sprites/home/normal/${
-          value
-            .toLowerCase()
-            .replace(/(.*) (mega)/, "$1")
-            .split(" ")[1]
-        }.png`;
-        img2.src = `./Images/mega/${
-          value.split(" ")[1][0].toUpperCase() + value.split(" ")[1].slice(1)
-        }_mega_energy.webp`;
-        div.append(img2);
+        // let img2 = document.createElement("img");
+        // img.classList.add("megaPokemon");
+        // img2.classList.add("megaEnergy");
+        // img.src = `https://img.pokemondb.net/sprites/home/normal/${
+        //   value
+        //     .toLowerCase()
+        //     .replace(/(.*) (mega)/, "$1")
+        //     .split(" ")[1]
+        // }.png`;
+        // img2.src = `./Images/mega/${
+        //   value.split(" ")[1][0].toUpperCase() + value.split(" ")[1].slice(1)
+        // }_mega_energy.webp`;
+        // div.append(img2);
       } else {
-        if (value)
-          img.src = `./Images/${value.split(" ")[1].toLowerCase()}.png`;
-        img.classList.add("item");
-        p.classList.add("itemQuantity");
+        // if (value)
+        //   img.src = `./Images/${value.split(" ")[1].toLowerCase()}.png`;
+        // img.classList.add("item");
+        // p.classList.add("itemQuantity");
       }
-      div.append(img);
-      div.append(p);
-      rightdiv.append(div);
+      // div.append(img);
+      // div.append(p);
+      // rightdiv.append(div);
     }
   }
+  console.log(serializer);
 };
 
 document.addEventListener("click", function (e) {
