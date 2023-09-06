@@ -8,10 +8,10 @@ let battlingTasks = new Map();
 let buddyFriendshipTasks = new Map();
 let itemsTasks = new Map();
 let miscellaneousTasks = new Map();
-let quest = document.querySelector(".quest");
+const quest = document.querySelector(".quest");
 let completePokedex;
 
-let getSeasonalQuestData = async () => {
+const getSeasonalQuestData = async () => {
   // Replace ./data.json with your JSON feed
   await fetch("./data/Season-Quests.txt")
     .then((response) => {
@@ -29,7 +29,7 @@ let getSeasonalQuestData = async () => {
 };
 getSeasonalQuestData();
 
-let getPokedexInfo = async () => {
+const getPokedexInfo = async () => {
   // Replace ./data.json with your JSON feed
   await fetch("./data/pokedexdata.json")
     .then((response) => {
@@ -47,19 +47,19 @@ let getPokedexInfo = async () => {
 };
 getPokedexInfo();
 
-let buildArray = (text) => {
-  let questArray = [];
+const buildArray = (text) => {
+  const questArray = [];
   rawArray = text.split(/\r?\n|\r|\n/g).slice(2);
-  for (let item of rawArray) {
+  for (const item of rawArray) {
     questArray.push(item.split(" ").slice(1).join(" "));
   }
   buildGroups(questArray);
 };
 
-let buildGroups = (questData) => {
+const buildGroups = (questData) => {
   let groupedData = new Map();
   let flag = false;
-  for (let data of questData) {
+  for (const data of questData) {
     if (flag && data !== "") {
       groupedData.set([data], ...rewardsArray.slice(-1));
     }
@@ -74,8 +74,8 @@ let buildGroups = (questData) => {
   filterGroups(groupedData);
 };
 
-let filterGroups = (pairedData) => {
-  for (let [key, value] of pairedData) {
+const filterGroups = (pairedData) => {
+  for (const [key, value] of pairedData) {
     if (value.includes("Pinap") || value.includes("Balls")) continue;
     if (value.includes("Berries") && !value.includes("Golden")) continue;
     if (
@@ -89,9 +89,9 @@ let filterGroups = (pairedData) => {
   getAllItemTasks(filteredData);
 };
 
-let getAllItemTasks = (mixedData) => {
+const getAllItemTasks = (mixedData) => {
   let remnant = new Map();
-  for (let [key, value] of mixedData) {
+  for (const [key, value] of mixedData) {
     if (
       value.includes("Rare") ||
       value.includes("Mega") ||
@@ -108,9 +108,9 @@ let getAllItemTasks = (mixedData) => {
   getAllCatchingTasks(filteredData);
 };
 
-let getAllCatchingTasks = (mixedData) => {
+const getAllCatchingTasks = (mixedData) => {
   let remnant = new Map();
-  for (let [key, value] of mixedData) {
+  for (const [key, value] of mixedData) {
     if (key[0].toLowerCase().includes("catch")) {
       catchingTasks.set(key, value);
     } else {
@@ -122,9 +122,9 @@ let getAllCatchingTasks = (mixedData) => {
   getAllThrowingTasks(filteredData);
 };
 
-let getAllThrowingTasks = (mixedData) => {
+const getAllThrowingTasks = (mixedData) => {
   let remnant = new Map();
-  for (let [key, value] of mixedData) {
+  for (const [key, value] of mixedData) {
     if (key[0].includes("Make")) {
       throwingTasks.set(key, value);
     } else {
@@ -136,9 +136,9 @@ let getAllThrowingTasks = (mixedData) => {
   getAllBattlingTasks(filteredData);
 };
 
-let getAllBattlingTasks = (mixedData) => {
+const getAllBattlingTasks = (mixedData) => {
   let remnant = new Map();
-  for (let [key, value] of mixedData) {
+  for (const [key, value] of mixedData) {
     if (key[0].includes("Win") || key[0].includes("Defeat")) {
       battlingTasks.set(key, value);
     } else {
@@ -150,9 +150,9 @@ let getAllBattlingTasks = (mixedData) => {
   getAllBuddyFriendshipTasks(filteredData);
 };
 
-let getAllBuddyFriendshipTasks = (mixedData) => {
+const getAllBuddyFriendshipTasks = (mixedData) => {
   let remnant = new Map();
-  for (let [key, value] of mixedData) {
+  for (const [key, value] of mixedData) {
     if (
       key[0].includes("buddy") ||
       key[0].includes("Gifts") ||
@@ -169,19 +169,19 @@ let getAllBuddyFriendshipTasks = (mixedData) => {
   getAllMiscellaneousTasks(filteredData);
 };
 
-let getAllMiscellaneousTasks = (tasks) => {
+const getAllMiscellaneousTasks = (tasks) => {
   miscellaneousTasks = tasks;
   //   console.log(miscellaneousTasks);
 };
 
 // UI IMPLEMENTATION AND FINAL RENDERING
-let parent = document.querySelector(".container");
-let tabs = document.querySelectorAll(".tasks");
-let title = document.querySelector(".child");
+const parent = document.querySelector(".container");
+const tabs = document.querySelectorAll(".tasks");
+const title = document.querySelector(".child");
 let selectedTab = document.querySelectorAll(".tasks")[0];
-// let button = document.querySelector(".button-name");
+// const button = document.querySelector(".button-name");
 
-for (let tab of tabs) {
+for (const tab of tabs) {
   tab.addEventListener("click", () => {
     title.textContent = tab.textContent;
     title.style.backgroundColor = tab.getAttribute("color");
@@ -229,9 +229,9 @@ for (let tab of tabs) {
 }
 
 const serializeUI = (tasks, category = "Default") => {
-  const serializerMap = new Map();
+  let serializerMap = new Map();
   console.clear();
-  for (let [key, value] of tasks) {
+  for (const [key, value] of tasks) {
     if (!serializerMap.has(...key))
       serializerMap.set(
         ...key,
@@ -260,9 +260,9 @@ const serializeUI = (tasks, category = "Default") => {
 
 const serializeImages = async (tasks, category = "Default") => {
   let serializerImagesMap = new Map();
-  let pokedexdata = completePokedex;
+  const pokedexdata = completePokedex;
   let sortedValue;
-  for (let [key, value] of tasks) {
+  for (const [key, value] of tasks) {
     if (category !== "Items") {
       sortedValue = value
         .split("#")
@@ -299,7 +299,7 @@ const serializeImages = async (tasks, category = "Default") => {
 };
 
 const serializeTitles = (tasks, category = "Default") => {
-  let titles = [...tasks.keys()];
+  const titles = [...tasks.keys()];
   let sortedTitle = [];
   switch (category) {
     case "Catching": {
@@ -397,13 +397,13 @@ const serializeTitles = (tasks, category = "Default") => {
 const fragmentUI = (titles, map, category) => {
   let fragmentedMap = new Map();
   console.clear();
-
-  console.log(map);
+  for (const title of titles) {
+    let values = map.get(title);
+    for (const value of values.split("#")) fragmentedMap.set([title], value);
+  }
+  buildUI(fragmentedMap, category);
 };
 
-/*
- * Needs Changes
- */
 const buildUI = (tasks, category = "Default") => {
   tasks.set([""], "");
   let temp = "";
@@ -414,7 +414,7 @@ const buildUI = (tasks, category = "Default") => {
   superdiv.classList.add("master");
 
   let flag = false;
-  for (let [key, value] of tasks) {
+  for (const [key, value] of tasks) {
     if (temp !== key[0]) {
       temp = key[0];
       if (flag) {
