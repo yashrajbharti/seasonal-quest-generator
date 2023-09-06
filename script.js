@@ -302,11 +302,25 @@ const serializeTitles = (tasks, category) => {
   console.clear();
   switch (category) {
     case "Catching": {
-      alert("Catch");
+      break;
+    }
+    case "Throwing": {
+      break;
+    }
+    case "Battling": {
+      break;
+    }
+    case "Buddy": {
+      break;
+    }
+    case "Items": {
+      break;
+    }
+    case "Miscellaneous": {
       break;
     }
   }
-  console.log(tasks, category);
+  console.log(tasks);
 };
 
 /*
