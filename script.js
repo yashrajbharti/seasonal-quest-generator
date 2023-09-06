@@ -240,9 +240,11 @@ const serializeUI = (tasks) => {
 };
 
 const serializeImages = (tasks) => {
-  console.clear();
+  let serializerImagesMap = new Map();
   for (let [key, value] of tasks) {
-    console.log(value);
+    let sortedValue = "";
+
+    serializerImagesMap.set(key, sortedValue);
   }
 };
 
