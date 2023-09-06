@@ -401,6 +401,7 @@ const fragmentUI = (titles, map, category) => {
     let values = map.get(title);
     for (const value of values.split("#")) fragmentedMap.set([title], value);
   }
+  console.log(fragmentedMap);
   buildUI(fragmentedMap, category);
 };
 
@@ -455,15 +456,12 @@ const buildUI = (tasks, category = "Default") => {
       div.classList.add("questItemsContainer");
       p.textContent = `x ${value.split(" ")[0]}`;
       let img = document.createElement("img");
-      if (value.includes("Mega")) {
+      if (value.includes("mega")) {
         let img2 = document.createElement("img");
         img.classList.add("megaPokemon");
         img2.classList.add("megaEnergy");
         img.src = `https://img.pokemondb.net/sprites/home/normal/${
-          value
-            .toLowerCase()
-            .replace(/(.*) (mega)/, "$1")
-            .split(" ")[1]
+          value.replace(/(.*) (mega)/, "$1").split(" ")[1]
         }.png`;
         img2.src = `./Images/mega/${
           value.split(" ")[1][0].toUpperCase() + value.split(" ")[1].slice(1)
