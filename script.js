@@ -205,7 +205,7 @@ for (let tab of tabs) {
       console.log(battlingTasks);
       serializeUI(battlingTasks);
     }
-    if (tab.textContent === "Buddy/Friendship Tasks") {
+    if (tab.textContent.split("/")[0] === "Buddy") {
       console.clear();
       buddyFriendshipTasks = new Map(
         [...buddyFriendshipTasks.entries()].sort()
@@ -259,21 +259,25 @@ const serializeUI = (tasks, isItem = false) => {
 };
 
 const serializeImages = async (tasks, isItem = false) => {
-  if (isItem) alert("hahah");
   let serializerImagesMap = new Map();
   let pokedexdata = completePokedex;
-  for (let [key, value] of tasks) {
-    let sortedValue = value
-      .split("#")
-      .sort((a, b) => {
-        parseInt(pokedexdata[a.split("-")[0]]) -
-          parseInt(pokedexdata[b.split("-")[0]]);
-      })
-      .join("#");
+  if (!isItem)
+    for (let [key, value] of tasks) {
+      let sortedValue = value
+        .split("#")
+        .sort((a, b) => {
+          if (a.split("-")[0] !== b.split("-")[0])
+            return (
+              parseInt(pokedexdata[a.split("-")[0]]) -
+              parseInt(pokedexdata[b.split("-")[0]])
+            );
+          if (a.split("-")[0] === b.split("-")[0]) return a.length - b.length;
+        })
+        .join("#");
 
-    serializerImagesMap.set(key, sortedValue);
-    console.log(sortedValue);
-  }
+      serializerImagesMap.set(key, sortedValue);
+      console.log(sortedValue);
+    }
 };
 
 /*
