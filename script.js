@@ -10,7 +10,26 @@ let itemsTasks = new Map();
 let miscellaneousTasks = new Map();
 const quest = document.querySelector(".quest");
 let completePokedex;
-
+const pokemonTypes = [
+  "grass",
+  "fire",
+  "water",
+  "electric",
+  "ground",
+  "ice",
+  "rock",
+  "steel",
+  "fighting",
+  "psychic",
+  "ghost",
+  "dark",
+  "fairy",
+  "poison",
+  "bug",
+  "flying",
+  "dragon",
+  "normal",
+];
 const getSeasonalQuestData = async () => {
   // Replace ./data.json with your JSON feed
   await fetch("./data/Season-Quests.txt")
@@ -356,13 +375,24 @@ const serializeTitles = (tasks, category = "Default") => {
     }
     case "Items": {
       console.clear();
-      sortedTitle = titles.sort((a, b) => {
-        if (a.includes("Catch"))
-          return parseInt(a.split(" ")[1]) - parseInt(b.split(" ")[1]);
-        if (a.includes("Make")) return a.length - b.length;
-        if (a.includes("Power"))
-          return parseInt(a.split(" ")[3]) - parseInt(b.split(" ")[3]);
-      });
+      sortedTitle = titles
+        .sort((a, b) => {
+          if (a.includes("Catch"))
+            return parseInt(a.split(" ")[1]) - parseInt(b.split(" ")[1]);
+          if (a.includes("Make")) return a.length - b.length;
+          if (a.includes("Power"))
+            return parseInt(a.split(" ")[3]) - parseInt(b.split(" ")[3]);
+        })
+        .sort((a, b) => {
+          if (a.includes("Catch 10") && b.includes("Catch 10")) {
+            return (
+              pokemonTypes.indexOf(
+                a.split(" ")[2].split("-")[0].toLowerCase()
+              ) -
+              pokemonTypes.indexOf(b.split(" ")[2].split("-")[0].toLowerCase())
+            );
+          }
+        });
       console.log(sortedTitle);
       break;
     }
