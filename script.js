@@ -6,7 +6,7 @@ let catchingTasks = new Map();
 let throwingTasks = new Map();
 let battlingTasks = new Map();
 let buddyFriendshipTasks = new Map();
-let itemsTasks = new Map();
+let itemTasks = new Map();
 let miscellaneousTasks = new Map();
 const quest = document.querySelector(".quest");
 let completePokedex;
@@ -117,12 +117,12 @@ const getAllItemTasks = (mixedData) => {
       value.includes("Golden") ||
       value.includes("Stardust")
     ) {
-      itemsTasks.set(key, value);
+      itemTasks.set(key, value);
     } else {
       remnant.set(key, value);
     }
   }
-  //   console.log(itemsTasks)
+  //   console.log(itemTasks)
   filteredData = remnant;
   getAllCatchingTasks(filteredData);
 };
@@ -232,11 +232,11 @@ for (const tab of tabs) {
       console.log(buddyFriendshipTasks);
       serializeUI(buddyFriendshipTasks, "Buddy");
     }
-    if (tab.textContent === "Items Tasks") {
+    if (tab.textContent === "Item Tasks") {
       console.clear();
-      itemsTasks = new Map([...itemsTasks.entries()].sort());
-      console.log(itemsTasks);
-      serializeUI(itemsTasks, "Items");
+      itemTasks = new Map([...itemTasks.entries()].sort());
+      console.log(itemTasks);
+      serializeUI(itemTasks, "Item");
     }
     if (tab.textContent === "Miscellaneous Tasks") {
       console.clear();
@@ -282,7 +282,7 @@ const serializeImages = async (tasks, category = "Default") => {
   const pokedexdata = completePokedex;
   let sortedValue;
   for (const [key, value] of tasks) {
-    if (category !== "Items") {
+    if (category !== "Item") {
       sortedValue = value
         .split("#")
         .sort((a, b) => {
@@ -295,7 +295,7 @@ const serializeImages = async (tasks, category = "Default") => {
         })
         .join("#");
     }
-    if (category === "Items") {
+    if (category === "Item") {
       if (value.includes("mega"))
         sortedValue = value
           .split("#")
@@ -373,7 +373,7 @@ const serializeTitles = (tasks, category = "Default") => {
       console.log(sortedTitle);
       break;
     }
-    case "Items": {
+    case "Item": {
       console.clear();
       sortedTitle = titles
         .sort((a, b) => {
@@ -384,7 +384,7 @@ const serializeTitles = (tasks, category = "Default") => {
             return parseInt(a.split(" ")[3]) - parseInt(b.split(" ")[3]);
         })
         .sort((a, b) => {
-          if (a.includes("Catch 10") && b.includes("Catch 10")) {
+          if (a.includes("-type") && b.includes("-type")) {
             return (
               pokemonTypes.indexOf(
                 a.split(" ")[2].split("-")[0].toLowerCase()
@@ -465,7 +465,7 @@ const buildUI = (tasks, category = "Default") => {
       leftdiv.append(h1);
       superdiv.append(leftdiv);
     }
-    if (temp === key[0] && category !== "Items") {
+    if (temp === key[0] && category !== "Item") {
       let div = document.createElement("div");
       div.classList.add("questImagesContainer");
       let img = document.createElement("img");
@@ -479,11 +479,11 @@ const buildUI = (tasks, category = "Default") => {
       div.append(img2);
       rightdiv.append(div);
     }
-    if (temp === key[0] && category === "Items") {
+    if (temp === key[0] && category === "Item") {
       let p = document.createElement("p");
       p.classList.add("quantity");
       let div = document.createElement("div");
-      div.classList.add("questItemsContainer");
+      div.classList.add("questItemContainer");
       p.textContent = `x ${value.split(" ")[0]}`;
       let img = document.createElement("img");
       if (value.includes("mega")) {
