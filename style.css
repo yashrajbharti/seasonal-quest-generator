@@ -227,3 +227,7 @@ p {
 .right:has(.item) .item {
     margin: 5px;
 }
+
+.ghost {
+    opacity: 0.4;
+}
