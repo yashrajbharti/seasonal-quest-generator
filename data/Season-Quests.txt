@@ -362,7 +362,7 @@ Total number of quests in the extracted data: 25232 |
 80x Oshawott:
 	80x Power up Pokémon 5 times
 
-119x Paldean Wooper:
+119x Paldea Wooper:
 	119x Make 10 Nice Throws
 
 79x Poliwag:
