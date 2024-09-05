@@ -261,6 +261,7 @@ const serializeUI = (tasks, category = "Default") => {
           .replace(/(hisuian) (.*)/, "$2-$1")
           .replace(/(galarian) (.*)/, "$2-$1")
           .replace(/(paldea) (.*)/, "$2-paldean")
+          .replace(/(paldean) (.*)/, "$2-paldean")
           .replace(/(female) (.*)/, "$2-f")
           .replace(/(male) (.*)/, "$2")
       );
@@ -276,6 +277,7 @@ const serializeUI = (tasks, category = "Default") => {
             .replace(/(hisuian) (.*)/, "$2-$1")
             .replace(/(galarian) (.*)/, "$2-$1")
             .replace(/(paldea) (.*)/, "$2-paldean")
+            .replace(/(paldean) (.*)/, "$2-paldean")
             .replace(/(female) (.*)/, "$2-f")
             .replace(/(male) (.*)/, "$2")
       );
