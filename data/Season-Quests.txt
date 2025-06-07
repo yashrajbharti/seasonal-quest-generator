@@ -1,459 +1,477 @@
-Total number of quests in the extracted data: 28532 |
+Total number of quests in the extracted data: 17624 |
 ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
-60x 1 Golden Razz Berry:
-	60x Earn 10000 XP
+98x 1 Golden Razz Berry:
+	98x Earn 10000 XP
 
-549x 1 Pinap Berry:
-	113x Catch 10 Pokémon
-	117x Catch 5 Pokémon with Weather Boost
-	108x Make 2 Nice Curveball Throws in a row
-	115x Make 3 Great Throws
-	96x Make 5 Nice Throws
+867x 1 Pinap Berry:
+	163x Catch 10 Pokémon
+	177x Catch 5 Pokémon with Weather Boost
+	195x Make 2 Nice Curveball Throws in a row
+	172x Make 3 Great Throws
+	160x Make 5 Nice Throws
 
-63x 1 Rare Candy:
-	17x Catch 8 Pokémon
-	13x Make 3 Great Curveball Throws
-	22x Make 3 Great Throws in a row
-	11x Send 3 Gifts to friends
-
-48x 1 Silver Pinap Berry:
-	48x Earn 10000 Stardust
-
-20x 10 Aggron Mega Energy:
-	20x Power up Pokémon 5 times
-
-31x 10 Beedrill Mega Energy:
-	31x Power up Pokémon 5 times
-
-55x 10 Blastoise Mega Energy:
-	24x Catch 10 Water-type Pokémon
-	31x Power up Pokémon 5 times
-
-43x 10 Blaziken Mega Energy:
-	43x Catch 10 Fire-type Pokémon
-
-74x 10 Charizard Mega Energy:
-	41x Catch 10 Fire-type Pokémon
-	33x Power up Pokémon 5 times
-
-40x 10 Manectric Mega Energy:
-	40x Power up Pokémon 5 times
-
-85x 10 Pidgeot Mega Energy:
-	52x Catch 10 Normal-type Pokémon
-	33x Power up Pokémon 5 times
-
-44x 10 Poké Balls:
+73x 1 Rare Candy:
+	9x Catch 8 Pokémon
 	31x Make 3 Great Curveball Throws
-	13x Make 3 Great Throws in a row
-
-39x 10 Sceptile Mega Energy:
-	39x Catch 10 Grass-type Pokémon
-
-35x 10 Swampert Mega Energy:
-	35x Catch 10 Water-type Pokémon
-
-14x 10 Ultra Balls:
-	6x Catch a Ditto
-	3x Catch a Dragon-type Pokémon
-	5x Make 3 Great Curveball Throws in a row
-
-60x 10 Venusaur Mega Energy:
-	39x Catch 10 Grass-type Pokémon
-	21x Power up Pokémon 5 times
-
-3495x 1000 Stardust:
-	62x Catch 8 Pokémon
-	16x Make 3 Great Curveball Throws
-	15x Make 3 Great Throws in a row
-	75x Send 3 Gifts to friends
-
-58x 1500 Stardust:
-	2x Catch a Ditto
-	6x Catch a Dragon-type Pokémon
-	3x Make 3 Great Curveball Throws in a row
-	47x Win a five-star raid
-
-21x 2 Golden Razz Berries:
-	3x Catch a Ditto
-	11x Catch a Dragon-type Pokémon
-	7x Make 3 Great Curveball Throws in a row
-
-500x 2 Pinap Berries:
-	29x Catch 10 Fire-type Pokémon
-	38x Catch 10 Grass-type Pokémon
-	52x Catch 10 Normal-type Pokémon
-	63x Catch 10 Pokémon with Weather Boost
-	35x Catch 10 Water-type Pokémon
-	53x Make 3 Nice Throws in a row
-	60x Make 5 Curveball Throws in a row
-	52x Make an Excellent Throw
-	58x Spin 3 PokéStops or Gyms
-	60x Use 5 Berries to help catch Pokémon
-
-105x 2 Ultra Balls:
-	65x Make 3 Nice Throws in a row
-	40x Make an Excellent Throw
-
-512x 200 Stardust:
-	90x Catch 10 Pokémon
-	96x Catch 5 Pokémon with Weather Boost
-	105x Make 2 Nice Curveball Throws in a row
-	113x Make 3 Great Throws
-	108x Make 5 Nice Throws
-
-151x 3 Great Balls:
-	151x Spin 5 PokéStops or Gyms
-
-326x 3 Kubfu Candies:
-	69x Defeat 3 Team GO Rocket Grunts
-	64x Take a snapshot of Kubfu
-	193x Win a Trainer Battle in the GO Battle League
-
-30x 3 Pinap Berries:
-	16x Make 3 Great Curveball Throws
-	14x Make 3 Great Throws in a row
-
-16x 3 Rare Candies:
-	4x Catch a Ditto
-	3x Catch a Dragon-type Pokémon
-	9x Make 3 Great Curveball Throws in a row
-
-548x 3 Razz Berries:
-	108x Catch 10 Pokémon
-	105x Catch 5 Pokémon with Weather Boost
-	109x Make 2 Nice Curveball Throws in a row
-	115x Make 3 Great Throws
-	111x Make 5 Nice Throws
-
-455x 5 Great Balls:
-	27x Catch 10 Fire-type Pokémon
-	44x Catch 10 Grass-type Pokémon
-	34x Catch 10 Normal-type Pokémon
-	58x Catch 10 Pokémon with Weather Boost
-	46x Catch 10 Water-type Pokémon
-	34x Make 3 Nice Throws in a row
-	57x Make 5 Curveball Throws in a row
-	50x Make an Excellent Throw
-	48x Spin 3 PokéStops or Gyms
-	57x Use 5 Berries to help catch Pokémon
-
-49x 5 Kubfu Candies:
-	49x Win a five-star raid
-
-559x 5 Poké Balls:
-	110x Catch 10 Pokémon
-	103x Catch 5 Pokémon with Weather Boost
-	109x Make 2 Nice Curveball Throws in a row
-	112x Make 3 Great Throws
-	125x Make 5 Nice Throws
-
-43x 5 Ultra Balls:
-	26x Make 3 Great Curveball Throws
-	17x Make 3 Great Throws in a row
-
-653x 500 Stardust:
-	47x Catch 10 Fire-type Pokémon
-	38x Catch 10 Grass-type Pokémon
-	35x Catch 10 Normal-type Pokémon
-	61x Catch 10 Pokémon with Weather Boost
-	42x Catch 10 Water-type Pokémon
-	36x Make 3 Nice Throws in a row
-	67x Make 5 Curveball Throws in a row
-	54x Make an Excellent Throw
-	65x Spin 3 PokéStops or Gyms
-	145x Spin 5 PokéStops or Gyms
-	63x Use 5 Berries to help catch Pokémon
-
-375x 6 Razz Berries:
-	44x Catch 10 Fire-type Pokémon
-	35x Catch 10 Grass-type Pokémon
-	35x Catch 10 Normal-type Pokémon
-	57x Catch 10 Pokémon with Weather Boost
-	28x Catch 10 Water-type Pokémon
-	60x Make 5 Curveball Throws in a row
-	66x Spin 3 PokéStops or Gyms
-	50x Use 5 Berries to help catch Pokémon
-
-42x 9 Razz Berries:
-	21x Make 3 Great Curveball Throws
-	21x Make 3 Great Throws in a row
-
-19x Aerodactyl:
-	19x Win 5 raids
-
-156x Aipom:
-	156x Hatch an Egg
-
-16x Alolan Diglett:
-	16x Make 5 Nice Throws
-
-12x Alolan Exeggutor:
-	12x Win 5 raids
-
-22x Alolan Marowak:
-	22x Win 5 raids
-
-25x Anorith:
 	25x Make 3 Great Throws in a row
+	8x Send 3 Gifts to friends
 
-36x Archen:
-	36x Win a three-star raid or higher
+85x 1 Silver Pinap Berry:
+	85x Earn 10000 Stardust
 
-24x Aron:
-	24x Spin 3 PokéStops or Gyms
+38x 10 Aggron Mega Energy:
+	38x Power up Pokémon 5 times
 
-3x Axew:
-	3x Catch a Dragon-type Pokémon
+49x 10 Beedrill Mega Energy:
+	49x Power up Pokémon 5 times
 
-7x Bagon:
+103x 10 Blastoise Mega Energy:
+	59x Catch 10 Water-type Pokémon
+	44x Power up Pokémon 5 times
+
+46x 10 Blaziken Mega Energy:
+	46x Catch 10 Fire-type Pokémon
+
+106x 10 Charizard Mega Energy:
+	45x Catch 10 Fire-type Pokémon
+	61x Power up Pokémon 5 times
+
+45x 10 Manectric Mega Energy:
+	45x Power up Pokémon 5 times
+
+127x 10 Pidgeot Mega Energy:
+	64x Catch 10 Normal-type Pokémon
+	63x Power up Pokémon 5 times
+
+55x 10 Poké Balls:
+	27x Make 3 Great Curveball Throws
+	28x Make 3 Great Throws in a row
+
+57x 10 Sceptile Mega Energy:
+	57x Catch 10 Grass-type Pokémon
+
+66x 10 Swampert Mega Energy:
+	66x Catch 10 Water-type Pokémon
+
+39x 10 Ultra Balls:
+	7x Catch a Ditto
+	17x Catch a Dragon-type Pokémon
+	15x Make 3 Great Curveball Throws in a row
+
+138x 10 Venusaur Mega Energy:
+	70x Catch 10 Grass-type Pokémon
+	68x Power up Pokémon 5 times
+
+532x 1000 Stardust:
+	50x Catch 8 Pokémon
+	29x Make 3 Great Curveball Throws
+	32x Make 3 Great Throws in a row
+	48x Send 3 Gifts to friends
+	373x Win a Max Battle
+
+38x 1500 Stardust:
+	8x Catch a Ditto
+	12x Catch a Dragon-type Pokémon
+	18x Make 3 Great Curveball Throws in a row
+
+28x 2 Golden Razz Berries:
+	8x Catch a Ditto
+	8x Catch a Dragon-type Pokémon
+	12x Make 3 Great Curveball Throws in a row
+
+777x 2 Pinap Berries:
+	58x Catch 10 Fire-type Pokémon
+	63x Catch 10 Grass-type Pokémon
+	71x Catch 10 Normal-type Pokémon
+	71x Catch 10 Pokémon with Weather Boost
+	61x Catch 10 Water-type Pokémon
+	81x Make 3 Nice Throws in a row
+	89x Make 5 Curveball Throws in a row
+	95x Make an Excellent Throw
+	85x Spin 3 PokéStops or Gyms
+	103x Use 5 Berries to help catch Pokémon
+
+188x 2 Ultra Balls:
+	105x Make 3 Nice Throws in a row
+	83x Make an Excellent Throw
+
+861x 200 Stardust:
+	164x Catch 10 Pokémon
+	176x Catch 5 Pokémon with Weather Boost
+	188x Make 2 Nice Curveball Throws in a row
+	160x Make 3 Great Throws
+	173x Make 5 Nice Throws
+
+66x 3 Pinap Berries:
+	36x Make 3 Great Curveball Throws
+	30x Make 3 Great Throws in a row
+
+341x 3 Rare Candies:
+	12x Catch a Ditto
+	11x Catch a Dragon-type Pokémon
+	3x Make 3 Great Curveball Throws in a row
+	315x Power up Pokémon 15 times
+
+855x 3 Razz Berries:
+	156x Catch 10 Pokémon
+	174x Catch 5 Pokémon with Weather Boost
+	169x Make 2 Nice Curveball Throws in a row
+	177x Make 3 Great Throws
+	179x Make 5 Nice Throws
+
+769x 5 Great Balls:
+	54x Catch 10 Fire-type Pokémon
+	54x Catch 10 Grass-type Pokémon
+	77x Catch 10 Normal-type Pokémon
+	91x Catch 10 Pokémon with Weather Boost
+	53x Catch 10 Water-type Pokémon
+	82x Make 3 Nice Throws in a row
+	92x Make 5 Curveball Throws in a row
+	89x Make an Excellent Throw
+	95x Spin 3 PokéStops or Gyms
+	82x Use 5 Berries to help catch Pokémon
+
+902x 5 Poké Balls:
+	181x Catch 10 Pokémon
+	179x Catch 5 Pokémon with Weather Boost
+	174x Make 2 Nice Curveball Throws in a row
+	182x Make 3 Great Throws
+	186x Make 5 Nice Throws
+
+62x 5 Ultra Balls:
+	33x Make 3 Great Curveball Throws
+	29x Make 3 Great Throws in a row
+
+754x 500 Stardust:
+	57x Catch 10 Fire-type Pokémon
+	59x Catch 10 Grass-type Pokémon
+	66x Catch 10 Normal-type Pokémon
+	104x Catch 10 Pokémon with Weather Boost
+	61x Catch 10 Water-type Pokémon
+	71x Make 3 Nice Throws in a row
+	83x Make 5 Curveball Throws in a row
+	84x Make an Excellent Throw
+	85x Spin 3 PokéStops or Gyms
+	84x Use 5 Berries to help catch Pokémon
+
+584x 6 Razz Berries:
+	50x Catch 10 Fire-type Pokémon
+	56x Catch 10 Grass-type Pokémon
+	61x Catch 10 Normal-type Pokémon
+	85x Catch 10 Pokémon with Weather Boost
+	60x Catch 10 Water-type Pokémon
+	84x Make 5 Curveball Throws in a row
+	83x Spin 3 PokéStops or Gyms
+	105x Use 5 Berries to help catch Pokémon
+
+64x 9 Razz Berries:
+	30x Make 3 Great Curveball Throws
+	34x Make 3 Great Throws in a row
+
+89x Absol:
+	89x Evolve a Pokémon
+
+31x Aerodactyl:
+	31x Win 5 raids
+
+32x Alolan Diglett:
+	32x Make 5 Nice Throws
+
+25x Alolan Exeggutor:
+	25x Win 5 raids
+
+32x Alolan Marowak:
+	32x Win 5 raids
+
+199x Alolan Rattata:
+	199x Spin 5 PokéStops or Gyms
+
+40x Anorith:
+	40x Make 3 Great Throws in a row
+
+44x Archen:
+	44x Win a three-star raid or higher
+
+42x Aron:
+	42x Spin 3 PokéStops or Gyms
+
+221x Audino:
+	221x Hatch an Egg
+
+7x Axew:
 	7x Catch a Dragon-type Pokémon
 
-28x Beedrill:
-	28x Win 2 raids
+6x Bagon:
+	6x Catch a Dragon-type Pokémon
 
-6x Beldum:
+8x Beldum:
+	8x Make 3 Excellent Throws in a row
+
+35x Binacle:
+	35x Make 3 Great Throws
+
+47x Bulbasaur:
+	47x Power up Pokémon 3 times
+
+61x Buneary:
+	61x Earn 2 Candies walking with your buddy
+
+49x Bunnelby:
+	49x Earn 2 Candies walking with your buddy
+
+50x Charmander:
+	50x Power up Pokémon 3 times
+
+218x Chimecho:
+	218x Hatch an Egg
+
+34x Clamperl:
+	34x Make 3 Great Throws
+
+109x Cottonee:
+	109x Take a snapshot of a wild Pokémon
+
+155x Croagunk:
+	155x Take a snapshot of a wild Pokémon
+
+145x Dedenne:
+	63x Earn 2 Candies walking with your buddy
+	82x Evolve a Pokémon
+
+28x Diglett:
+	28x Make 5 Nice Throws
+
+46x Doduo:
+	46x Spin 3 PokéStops or Gyms
+
+4x Dratini:
+	4x Catch a Dragon-type Pokémon
+
+112x Dusclops:
+	112x Trade a Pokémon
+
+180x Eevee:
+	180x Evolve a Pokémon
+
+31x Elgyem:
+	31x Make 3 Great Throws
+
+171x Espurr:
+	171x Win a raid
+
+134x Feebas:
+	12x Hatch 2 Eggs
+	122x Trade a Pokémon
+
+156x Fidough:
+	156x Explore 2 km
+
+19x Galarian Slowpoke:
+	19x Spin 5 PokéStops or Gyms
+
+43x Galarian Stunfisk:
+	43x Earn 3 Candies walking with your buddy
+
+182x Galarian Zigzagoon:
+	182x Spin 5 PokéStops or Gyms
+
+6x Gible:
 	6x Make 3 Excellent Throws in a row
 
-14x Binacle:
-	14x Make 3 Great Throws
+60x Glameow:
+	60x Earn 2 Candies walking with your buddy
 
-30x Bulbasaur:
-	30x Power up Pokémon 3 times
+182x Greavard:
+	182x Explore 2 km
 
-38x Buneary:
-	38x Earn 2 Candies walking with your buddy
+211x Growlithe:
+	189x Explore 2 km
+	22x Spin 5 PokéStops or Gyms
 
-39x Bunnelby:
-	39x Earn 2 Candies walking with your buddy
+108x Hatenna:
+	108x Catch 7 different species of Pokémon
 
-31x Charmander:
-	31x Power up Pokémon 3 times
+49x Hippopotas:
+	49x Catch 5 Pokémon with Weather Boost
 
-25x Clamperl:
-	25x Make 3 Great Throws
+199x Hisuian Growlithe:
+	178x Explore 2 km
+	21x Spin 5 PokéStops or Gyms
 
-131x Clauncher:
-	131x Catch 7 different species of Pokémon
+116x Hisuian Qwilfish:
+	116x Defeat 3 Team GO Rocket Grunts
 
-68x Cottonee:
-	68x Take a snapshot of a wild Pokémon
+86x Inkay:
+	86x Win a Trainer Battle in the GO Battle League
 
-101x Crabrawler:
-	101x Evolve 2 Pokémon
+194x Jangmo-o:
+	194x Make 2 Excellent Throws
 
-293x Croagunk:
-	214x Power up Pokémon 5 times
-	79x Take a snapshot of a wild Pokémon
+73x Jigglypuff:
+	73x Earn 2 Candies walking with your buddy
 
-33x Dedenne:
-	33x Earn 2 Candies walking with your buddy
+49x Kabuto:
+	49x Make 3 Great Throws
 
-18x Diglett:
-	18x Make 5 Nice Throws
+95x Komala:
+	95x Evolve a Pokémon
 
-29x Doduo:
-	29x Spin 3 PokéStops or Gyms
+92x Lapras:
+	92x Win a Trainer Battle in the GO Battle League
 
-51x Dratini:
-	3x Catch a Dragon-type Pokémon
-	48x Defeat 3 Team GO Rocket Grunts
+2x Larvitar:
+	2x Make 3 Excellent Throws in a row
 
-147x Ducklett:
-	147x Hatch an Egg
+173x Lechonk:
+	173x Spin 5 PokéStops or Gyms
 
-105x Eevee:
-	105x Evolve a Pokémon
+44x Lileep:
+	44x Make 3 Great Throws in a row
 
-18x Elgyem:
-	18x Make 3 Great Throws
+54x Litleo:
+	54x Earn 2 Candies walking with your buddy
 
-141x Falinks:
-	141x Win a raid
+54x Litten:
+	54x Power up Pokémon 7 times
 
-126x Feebas:
-	5x Hatch 2 Eggs
-	121x Trade a Pokémon
+101x Magikarp:
+	101x Catch 7 Pokémon
 
-12x Galarian Slowpoke:
-	12x Spin 5 PokéStops or Gyms
+200x Mawile:
+	14x Hatch 2 Eggs
+	186x Win a raid
 
-29x Galarian Stunfisk:
-	29x Earn 3 Candies walking with your buddy
+87x Miltank:
+	87x Evolve a Pokémon
 
-7x Gible:
-	7x Make 3 Excellent Throws in a row
-
-41x Glameow:
-	41x Earn 2 Candies walking with your buddy
-
-11x Growlithe:
-	11x Spin 5 PokéStops or Gyms
-
-157x Hatenna:
-	157x Catch 7 different species of Pokémon
-
-35x Hippopotas:
-	35x Catch 5 Pokémon with Weather Boost
-
-16x Hisuian Growlithe:
-	16x Spin 5 PokéStops or Gyms
-
-43x Houndoom:
-	43x Win 2 raids
-
-55x Jangmo-o:
-	55x Make 2 Excellent Throws
-
-35x Jigglypuff:
-	35x Earn 2 Candies walking with your buddy
-
-36x Kabuto:
-	36x Make 3 Great Throws
-
-180x Klink:
-	180x Win a raid
-
-73x Larvitar:
-	69x Defeat 3 Team GO Rocket Grunts
-	4x Make 3 Excellent Throws in a row
-
-26x Lileep:
-	26x Make 3 Great Throws in a row
-
-38x Litleo:
-	38x Earn 2 Candies walking with your buddy
-
-39x Litten:
-	39x Power up Pokémon 7 times
-
-191x Magikarp:
-	67x Catch 7 Pokémon
-	124x Trade a Pokémon
-
-115x Makuhita:
-	115x Send 3 Gifts and add a sticker to each
-
-140x Mankey:
-	140x Spin 5 PokéStops or Gyms
-
-163x Mawile:
-	6x Hatch 2 Eggs
-	157x Win a raid
-
-113x Mienfoo:
-	113x Power up Pokémon 10 times
-
-143x Murkrow:
-	143x Explore 2 km
+84x Nickit:
+	84x Catch 7 different species of Pokémon
 
 22x Nincada:
 	22x Hatch an Egg
 
-21x Omanyte:
-	21x Make 3 Great Throws
+53x Omanyte:
+	53x Make 3 Great Throws
 
-26x Oshawott:
-	26x Power up Pokémon 5 times
+58x Oshawott:
+	58x Power up Pokémon 5 times
 
-92x Passimian:
-	92x Power up Pokémon 10 times
+80x Passimian:
+	80x Catch 7 different species of Pokémon
 
-32x Poliwag:
-	32x Catch 5 Pokémon with Weather Boost
+100x Pawniard:
+	100x Defeat 3 Team GO Rocket Grunts
 
-32x Popplio:
-	32x Power up Pokémon 7 times
+53x Poliwag:
+	53x Catch 5 Pokémon with Weather Boost
 
-138x Ralts:
-	111x Send 3 Gifts and add a sticker to each
-	27x Spin 3 PokéStops or Gyms
+66x Popplio:
+	66x Power up Pokémon 7 times
 
-26x Remoraid:
-	26x Spin 3 PokéStops or Gyms
+50x Ralts:
+	50x Spin 3 PokéStops or Gyms
 
-40x Roggenrola:
-	40x Catch 5 Pokémon with Weather Boost
+38x Remoraid:
+	38x Spin 3 PokéStops or Gyms
 
-54x Rowlet:
-	54x Power up Pokémon 7 times
+119x Rhydon:
+	119x Trade a Pokémon
 
-137x Sandygast:
-	137x Catch 7 different species of Pokémon
+180x Rockruff:
+	180x Win a raid
 
-211x Scraggy:
-	211x Power up Pokémon 5 times
+53x Roggenrola:
+	53x Catch 5 Pokémon with Weather Boost
 
-16x Scyther:
+74x Rookidee:
+	74x Catch 7 different species of Pokémon
+
+66x Rowlet:
+	66x Power up Pokémon 7 times
+
+74x Sandygast:
+	74x Catch 7 different species of Pokémon
+
+120x Scraggy:
+	120x Defeat 3 Team GO Rocket Grunts
+
+182x Scyther:
 	16x Hatch an Egg
+	166x Win a raid
 
-143x Shellder:
-	143x Explore 2 km
+90x Skrelp:
+	90x Catch 7 different species of Pokémon
 
-31x Slowbro:
-	31x Win 2 raids
+24x Slowpoke:
+	24x Spin 5 PokéStops or Gyms
 
-9x Slowpoke:
-	9x Spin 5 PokéStops or Gyms
+97x Smoliv:
+	97x Catch 7 different species of Pokémon
 
-147x Smoliv:
-	147x Hatch an Egg
+15x Sneasel:
+	15x Hatch 2 Eggs
 
-8x Sneasel:
-	8x Hatch 2 Eggs
+75x Snivy:
+	75x Power up Pokémon 5 times
 
-26x Snivy:
-	26x Power up Pokémon 5 times
+44x Snover:
+	44x Catch 5 Pokémon with Weather Boost
 
-25x Snover:
-	25x Catch 5 Pokémon with Weather Boost
+93x Spinda:
+	93x Make 5 Great Curveball Throws in a row
 
-30x Spinda:
-	30x Make 5 Great Curveball Throws in a row
+86x Spoink:
+	86x Win a Trainer Battle in the GO Battle League
 
-33x Spinda:
-	33x Make 5 Great Curveball Throws in a row
+70x Squirtle:
+	70x Power up Pokémon 3 times
 
-35x Squirtle:
-	35x Power up Pokémon 3 times
+220x Stufful:
+	126x Catch 7 Pokémon
+	94x Send 3 Gifts and add a sticker to each
 
-79x Stufful:
-	79x Catch 7 Pokémon
+145x Stunfisk:
+	100x Catch 7 different species of Pokémon
+	45x Earn 3 Candies walking with your buddy
 
-23x Stunfisk:
-	23x Earn 3 Candies walking with your buddy
+47x Sudowoodo:
+	21x Hatch an Egg
+	26x Make 5 Nice Throws
 
-37x Sudowoodo:
-	18x Hatch an Egg
-	19x Make 5 Nice Throws
+96x Swablu:
+	96x Send 3 Gifts and add a sticker to each
 
-31x Tepig:
-	31x Power up Pokémon 5 times
+52x Tepig:
+	52x Power up Pokémon 5 times
 
-32x Tirtouga:
-	32x Win a three-star raid or higher
+43x Tirtouga:
+	43x Win a three-star raid or higher
 
-93x Togedemaru:
-	93x Evolve 2 Pokémon
+120x Trapinch:
+	120x Take a snapshot of a wild Pokémon
 
-75x Trapinch:
-	75x Take a snapshot of a wild Pokémon
+243x Trubbish:
+	243x Hatch an Egg
 
-15x Trubbish:
-	15x Hatch an Egg
+44x Vanillite:
+	44x Catch 5 Pokémon with Weather Boost
 
-38x Vanillite:
-	38x Catch 5 Pokémon with Weather Boost
+92x Vullaby:
+	92x Win a Trainer Battle in the GO Battle League
 
-28x Vulpix:
-	28x Catch 5 Pokémon with Weather Boost
+53x Vulpix:
+	53x Catch 5 Pokémon with Weather Boost
 
-72x Wimpod:
-	72x Catch 7 Pokémon
+77x Wailmer:
+	77x Send 3 Gifts and add a sticker to each
 
-20x Wingull:
-	20x Catch 5 Pokémon with Weather Boost
+191x Wimpod:
+	104x Catch 7 Pokémon
+	87x Send 3 Gifts and add a sticker to each
 
-156x Wurmple:
-	156x Explore 2 km
+50x Wingull:
+	50x Catch 5 Pokémon with Weather Boost
+
+153x Yungoos:
+	153x Spin 5 PokéStops or Gyms
 
